@@ -11,14 +11,14 @@
     "preview": "vite preview",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build",
-    "start": "react-scripts start"
+    "start": "vite"
   },
   "dependencies": {
     "gsap": "^3.13.0",
     "lucide-react": "^0.542.0",
     "motion": "^12.23.12",
-    "react": "^19.1.1",
-    "react-dom": "^19.1.1",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
     "react-typewriter-effect": "^1.1.0",
     "typewriter-effect": "^2.22.0"
   },
