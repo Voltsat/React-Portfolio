@@ -61,7 +61,11 @@ export default function About() {
         </p>
       </div>
 
-      <div class="bg-gray-100 rounded-xl shadow-lg p-6 md:p-8 lg:p-10 max-w-7xl mx-auto border-2 border-white hover:border-sky-500">
+      <div>
+        
+      </div>
+
+      <div class="bg-gray-100 rounded-xl shadow-lg p-6 md:p-8 lg:p-10 max-w-7xl mx-auto border-2 w-11/12 border-white hover:border-sky-500">
         <div class="flex flex-col md:flex-row md:divide-x md:divide-gray-200">
 
           <div class="flex flex-col items-center md:items-start text-center md:text-left px-4 md:px-8 py-4 flex-1">
