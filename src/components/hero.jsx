@@ -8,9 +8,9 @@ export default
   return (
     <section className="flex flex-col text-center min-h-screen justify-center z-10 relative motion-scale-in-[0.25] motion-blur-in-[10px] motion-delay-[0.25s]/blur motion-ease-linear">
       <div className="flex flex-wrap mb-8 justify-center gap-3 md:gap-12">
-        <span className="bg-gray-800/50 border-gray-700 border-[1px] text-white px-2 py-1 md:px-3 md:py-1 rounded-3xl hover:bg-gray-800/100">Devaccto RPL</span>
-        <span className="bg-gray-800/50 border-gray-700 border-[1px] text-white px-2 py-1 md:px-3 md:py-1 rounded-3xl hover:bg-gray-800/100">Plus Pelita Nusantara</span>
-        <span className="bg-gray-800/50 border-gray-700 border-[1px] text-white px-2 py-1 md:px-3 md:py-1 rounded-3xl hover:bg-gray-800/100">15 Years Old</span>
+        <span className="bg-gray-800/50 border-gray-700 border-[1px] text-white px-2 py-1 md:px-3 md:py-1 rounded-3xl hover:bg-gray-800/100 hover:-translate-y-1">Devaccto RPL</span>
+        <span className="bg-gray-800/50 border-gray-700 border-[1px] text-white px-2 py-1 md:px-3 md:py-1 rounded-3xl hover:bg-gray-800/100 hover:-translate-y-1">Plus Pelita Nusantara</span>
+        <span className="bg-gray-800/50 border-gray-700 border-[1px] text-white px-2 py-1 md:px-3 md:py-1 rounded-3xl hover:bg-gray-800/100 hover:-translate-y-1">15 Years Old</span>
       </div>
       <div className="flex gap-4 mx-auto">
         <h1 className="text-xl md:text-3xl font-thin text-white mb-3">Hi, I am</h1>
