@@ -1,44 +1,12 @@
 import ScrollReveal from './animation/scrollReveal';
 import TrueFocus from './animation/trueFocus';
+import TextType from './animation/textType';
+
+import Muka from "../assets/jeannedarc.jpg";
 
 export default function About() {
-
-  const skills = [
-    {
-      title: "Full Stack",
-      description:
-        "Skilled in both frontend and backend, with a primary focus on building secure, efficient, and scalable backend systems.",
-      icon: (
-        <svg className="w-6 h-6 text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 17l4 4 4-4m0-10l-4-4-4 4" />
-        </svg>
-      ),
-    },
-    {
-      title: "Problem Solver",
-      description:
-        "Detail-oriented and analytical, I tackle challenges with a clear approach, creating efficient and reliable solutions.",
-      icon: (
-        <svg className="w-6 h-6 text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3" />
-        </svg>
-      ),
-    },
-    {
-      title: "Tech Explorer",
-      description:
-        "Always on the lookout for new tools and technologies to implement effective and modern solutions.",
-      icon: (
-        <svg className="w-6 h-6 text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 4v16m8-8H4" />
-        </svg>
-      ),
-    },
-  ];
-
   return (
-
-    <section className="min-h-screen z-10 relative bg-transparent flex flex-col">
+    <section className="pb-6 z-10 relative bg-transparent flex flex-col">
       <div className='flex flex-col items-center'>
         <h2 className="text-5xl font-bold text-white mt-20">
           <TrueFocus
@@ -57,55 +25,89 @@ export default function About() {
             baseRotation={4}
             blurStrength={10}
             textClassName='text-lg'
-          > &lt; I know something you dont know &gt;</ScrollReveal>
+          >
+            &lt; I know something you dont know &gt;
+          </ScrollReveal>
         </p>
       </div>
 
-      <div>
-        
-      </div>
-
-      <div class="bg-gray-100 rounded-xl shadow-lg p-6 md:p-8 lg:p-10 max-w-7xl mx-auto border-2 w-11/12 border-white hover:border-sky-500">
-        <div class="flex flex-col md:flex-row md:divide-x md:divide-gray-200">
-
-          <div class="flex flex-col items-center md:items-start text-center md:text-left px-4 md:px-8 py-4 flex-1">
-            <div class="flex items-center space-x-2 mb-2">
-              <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-blue-600" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path>
-              </svg>
-              <h3 class="text-xl font-semibold text-gray-800">Full Stack</h3>
-            </div>
-            <p class="mt-2 text-gray-600 leading-relaxed">Skilled in both frontend and backend, with a primary focus on building secure, efficient, and scalable backend systems.</p>
-          </div>
-
-          <div class="flex flex-col items-center md:items-start text-center md:text-left px-4 md:px-8 py-4 flex-1 mt-6 md:mt-0">
-            <div class="flex items-center space-x-2 mb-2">
-              <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-blue-600" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
-                <polyline points="14 2 14 8 20 8"></polyline>
-                <line x1="16" y1="13" x2="8" y2="13"></line>
-                <line x1="16" y1="17" x2="8" y2="17"></line>
-                <line x1="10" y1="9" x2="8" y2="9"></line>
-              </svg>
-              <h3 class="text-xl font-semibold text-gray-800">Problem Solver</h3>
-            </div>
-            <p class="mt-2 text-gray-600 leading-relaxed">Detail-oriented and analytical, I tackle challenges with a clear approach, creating efficient and reliable solutions.</p>
-          </div>
-
-          <div class="flex flex-col items-center md:items-start text-center md:text-left px-4 md:px-8 py-4 flex-1 mt-6 md:mt-0">
-            <div class="flex items-center space-x-2 mb-2">
-              <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-blue-600" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M22 12h-4l-3 9L9 3l-3 9H2"></path>
-              </svg>
-              <h3 class="text-xl font-semibold text-gray-800">Tech Explorer</h3>
-            </div>
-            <p class="mt-2 text-gray-600 leading-relaxed">Always on the lookout for new tools and technologies to implement effective and modern solutions.</p>
-          </div>
-
+      <div className='block mx-auto lg:mx-0 md:flex mb-12 min-w-screen mt-0 md:mt-[6vh] lg:mt-[8vh]'>
+        <div className='text-white flex flex-col lg:ml-16'>
+          <span className='text-4xl font-sans font-bold'>
+            <TextType
+              text={["Hey there!", "What's up?", "Welcome!"]}
+              textColors={["#06b6d4", "#10b981", "#8b5cf6"]}
+              typingSpeed={60}
+              pauseDuration={1750}
+              showCursor={true}
+              cursorCharacter="|"
+            />
+          </span>
+          <p className='w-80 md:w-[520px] lg:w-[560px] [@media(min-width:1320px)]:w-[60vw] mb-5 lg:ml-6 text-lg md:text-xl text-gray-200'>
+            My name is <span className='text-white'>Dhabit Muhammad Faqih</span>, a passionate software developer who loves exploring new technologies and turning ideas into real, working solutions. With a strong curiosity for learning, I constantly challenge myself to improve both in frontend and backend development, making sure the projects I build are efficient, modern, and scalable.
+          </p>
+          <p className='w-80 md:w-[520px] lg:w-[560px] [@media(min-width:1320px)]:w-[60vw] mb-5 lg:ml-6 text-lg md:text-xl text-gray-200'>
+            Beyond coding, I enjoy solving problems and finding the most effective way to deliver clean, maintainable solutions. For me, technology is not just a tool, but also a way to create meaningful impact and help people through innovative applications.
+          </p>
+        </div>
+        <div className='ml-auto lg:mr-[12vw]'>
+          <img
+            src={Muka}
+            className='mx-auto w-32 h-32 md:h-48 md:w-48 lg:h-64 lg:w-64 rounded-full border-2'
+          />
         </div>
       </div>
 
+      <div className='md:mx-auto md:w-10/12 px-9 mt-[4vh] md:mt-[8vh] lg:mt-[14vh] md:flex md:flex-wrap gap-4'>
+        <div className="bg-white/10 backdrop-blur-md rounded-xl shadow-lg p-3 mb-2 mx-auto border-2 border-white/5 hover:border-white flex-1">
+          <div className="flex flex-col items-center md:items-start text-center md:text-left px-4 md:px-8 py-4">
+            <div className='flex items-center w-full'>
+              <div className="flex items-center space-x-6 mb-2">
+                <svg xmlns="http://www.w3.org/2000/svg" className="h-12 w-12 text-white p-2 bg-gray-500 border-2 border-white/20 rounded-lg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                  <path d="M12 2L2 7l10 5 10-5-10-5zM2 170l10 5 10-5M2 12l10 5 10-5"></path>
+                </svg>
+                <h3 className="text-xl font-semibold text-cyan-400">Created Project</h3>
+              </div>
+              <p className='text-2xl text-white p-2 bg-white/20 rounded-md w-12 flex justify-center ml-auto'>1</p>
+            </div>
+            <p className="mt-2 text-gray-300 mx-auto">Projects that I have created show my journey of learning and building useful applications.</p>
+          </div>
+        </div>
 
+        <div className="bg-white/10 backdrop-blur-md rounded-xl shadow-lg p-3 mb-2 mx-auto border-2 border-white/5 hover:border-white flex-1">
+          <div className="flex flex-col items-center md:items-start text-center md:text-left px-4 md:px-8 py-4 mt-6 md:mt-0">
+            <div className='flex items-center w-full'>
+              <div className="flex items-center space-x-6 mb-2">
+                <svg xmlns="http://www.w3.org/2000/svg" className="h-12 w-12 text-white p-2 bg-gray-500 border-2 border-white/20 rounded-lg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                  <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                  <polyline points="14 2 14 8 20 8"></polyline>
+                  <line x1="16" y1="13" x2="8" y2="13"></line>
+                  <line x1="16" y1="17" x2="8" y2="17"></line>
+                  <line x1="10" y1="9" x2="8" y2="9"></line>
+                </svg>
+                <h3 className="text-xl font-semibold text-cyan-400">Owned Certificate</h3>
+              </div>
+              <p className='text-2xl text-white p-2 bg-white/20 rounded-md w-12 flex justify-center ml-auto'>5</p>
+            </div>
+            <p className="mt-2 text-gray-300 mx-auto">Certificates that I have earned reflect the skills and knowledge I have achieved so far.</p>
+          </div>
+        </div>
+
+        <div className="bg-white/10 backdrop-blur-md rounded-xl shadow-lg p-3 mb-2 mx-auto border-2 border-white/5 hover:border-white flex-1">
+          <div className="flex flex-col items-center md:items-start text-center md:text-left px-4 md:px-8 py-4 mt-6 md:mt-0">
+            <div className='flex items-center w-full'>
+              <div className="flex items-center space-x-6 mb-2">
+                <svg xmlns="http://www.w3.org/2000/svg" className="h-12 w-12 text-white p-2 bg-gray-500 border-2 border-white/20 rounded-lg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                  <path d="M22 12h-4l-3 9L9 3l-3 9H2"></path>
+                </svg>
+                <h3 className="text-xl font-semibold text-cyan-400">Years of Experience</h3>
+              </div>
+              <p className='text-2xl text-white p-2 bg-white/20 rounded-md w-12 flex justify-center ml-auto'>1</p>
+            </div>
+            <p className="mt-2 text-gray-300 mx-auto">My experience in programming represents the growth and challenges I have faced while improving my skills.</p>
+          </div>
+        </div>
+      </div>
     </section>
   );
 }
