@@ -58,11 +58,11 @@ export default function About() {
         </div>
       </div>
 
-      <div className='md:mx-auto md:w-10/12 px-9 mt-[4vh] md:mt-[8vh] lg:mt-[14vh] md:flex md:flex-wrap gap-4'>
+      <div className='md:mx-auto md:w-11/12 px-9 mt-[4vh] md:mt-[8vh] lg:mt-[14vh] md:flex md:flex-wrap gap-4'>
         <div className="bg-white/10 backdrop-blur-md rounded-xl shadow-lg p-3 mb-2 mx-auto border-2 border-white/5 hover:border-white flex-1">
           <div className="flex flex-col items-center md:items-start text-center md:text-left px-4 md:px-8 py-4">
             <div className='flex items-center w-full'>
-              <div className="flex items-center space-x-6 mb-2">
+              <div className="flex items-center space-x-10 mb-2">
                 <svg xmlns="http://www.w3.org/2000/svg" className="h-12 w-12 text-white p-2 bg-gray-500 border-2 border-white/20 rounded-lg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                   <path d="M12 2L2 7l10 5 10-5-10-5zM2 170l10 5 10-5M2 12l10 5 10-5"></path>
                 </svg>
@@ -77,7 +77,7 @@ export default function About() {
         <div className="bg-white/10 backdrop-blur-md rounded-xl shadow-lg p-3 mb-2 mx-auto border-2 border-white/5 hover:border-white flex-1">
           <div className="flex flex-col items-center md:items-start text-center md:text-left px-4 md:px-8 py-4 mt-6 md:mt-0">
             <div className='flex items-center w-full'>
-              <div className="flex items-center space-x-6 mb-2">
+              <div className="flex items-center space-x-10 mb-2">
                 <svg xmlns="http://www.w3.org/2000/svg" className="h-12 w-12 text-white p-2 bg-gray-500 border-2 border-white/20 rounded-lg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                   <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
                   <polyline points="14 2 14 8 20 8"></polyline>
@@ -96,7 +96,7 @@ export default function About() {
         <div className="bg-white/10 backdrop-blur-md rounded-xl shadow-lg p-3 mb-2 mx-auto border-2 border-white/5 hover:border-white flex-1">
           <div className="flex flex-col items-center md:items-start text-center md:text-left px-4 md:px-8 py-4 mt-6 md:mt-0">
             <div className='flex items-center w-full'>
-              <div className="flex items-center space-x-4 mb-2">
+              <div className="flex items-center space-x-10 mb-2">
                 <svg xmlns="http://www.w3.org/2000/svg" className="h-12 w-12 text-white p-2 bg-gray-500 border-2 border-white/20 rounded-lg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                   <path d="M22 12h-4l-3 9L9 3l-3 9H2"></path>
                 </svg>
