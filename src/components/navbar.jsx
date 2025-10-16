@@ -1,4 +1,5 @@
-import { useState, useEffect } from "react"; // jangan lupa import useEffect
+import { useState, useEffect } from "react";
+import { FileUser } from 'lucide-react';
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -22,20 +23,20 @@ export default function Navbar() {
   return (
     <nav className="fixed top-0 left-0 w-full justify-center flex p-4 backdrop-blur-sm bg-white/1 z-20">
       {/* Logo */}
-      <div className="text-3xl font-extrabold tracking-wider relative after:content-[''] after:absolute after:w-full after:h-[3px] after:bg-blue-400 after:left-0 after:bottom-[-4px] after:scale-x-0 after:origin-left after:transition-transform after:duration-500 hover:after:scale-x-100">
+      <div className="text-3xl ml-3 font-extrabold tracking-wider relative after:content-[''] after:absolute after:w-full after:h-[3px] after:bg-blue-400 after:left-0 after:bottom-[-4px] after:scale-x-0 after:origin-left after:transition-transform after:duration-500 hover:after:scale-x-100">
         <span className="text-blue-400">D</span>
         <span className="text-gray-300">habit</span>
       </div>
 
       {/* Desktop Menu */}
-      <ul className="hidden md:flex gap-14 ml-auto mr-3 text-2xl text-gray-300">
+      <ul className="hidden md:flex gap-14 mx-auto text-2xl text-gray-300">
         <li className="relative cursor-pointer after:content-[''] after:absolute after:w-full after:h-[2px] after:bg-blue-400 after:left-0 after:bottom-0 after:scale-x-0 after:origin-center after:transition-transform after:duration-300 hover:after:scale-x-100 hover:text-white"><a href="https://www.youtube.com/">Home</a></li>
         <li className="relative cursor-pointer after:content-[''] after:absolute after:w-full after:h-[2px] after:bg-blue-400 after:left-0 after:bottom-0 after:scale-x-0 after:origin-center after:transition-transform after:duration-300 hover:after:scale-x-100 hover:text-white"><a href="https://www.youtube.com/">About Me</a></li>
         <li className="relative cursor-pointer after:content-[''] after:absolute after:w-full after:h-[2px] after:bg-blue-400 after:left-0 after:bottom-0 after:scale-x-0 after:origin-center after:transition-transform after:duration-300 hover:after:scale-x-100 hover:text-white"><a href="https://www.youtube.com/">Project</a></li>
         <li className="relative cursor-pointer after:content-[''] after:absolute after:w-full after:h-[2px] after:bg-blue-400 after:left-0 after:bottom-0 after:scale-x-0 after:origin-center after:transition-transform after:duration-300 hover:after:scale-x-100 hover:text-white"><a href="https://www.youtube.com/">Skills</a></li>
         <li className="relative cursor-pointer after:content-[''] after:absolute after:w-full after:h-[2px] after:bg-blue-400 after:left-0 after:bottom-0 after:scale-x-0 after:origin-center after:transition-transform after:duration-300 hover:after:scale-x-100 hover:text-white"><a href="https://www.youtube.com/">Contact</a></li>
-
       </ul>
+        <li className="hidden md:flex text-2xl mr-3 text-white bg-sky-500 py-1 px-2 rounded-md hover:bg-black/50"><a href="https://www.youtube.com/" className="flex h-full items-center gap-2"><FileUser />Download CV</a></li>
 
       {/* Hamburger */}
       <button onClick={() => setIsOpen(!isOpen)} className="md:hidden flex flex-col gap-1 justify-center ml-auto relative w-8 h-8">
@@ -53,6 +54,7 @@ export default function Navbar() {
             <li className="relative cursor-pointer active:text-sky-500"><a href="https://www.youtube.com/">Project</a></li>
             <li className="relative cursor-pointer active:text-sky-500"><a href="https://www.youtube.com/">Skills</a></li>
             <li className="relative cursor-pointer active:text-sky-500"><a href="https://www.youtube.com/">Contact</a></li>
+            <li className="relative cursor-pointer active:text-sky-500"><a href="https://www.youtube.com/">Download CV</a></li>
           </ul>
         </div>
       )}
