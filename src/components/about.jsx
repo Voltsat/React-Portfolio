@@ -2,7 +2,7 @@ import ScrollReveal from './animation/scrollReveal';
 import TrueFocus from './animation/trueFocus';
 import TextType from './animation/textType';
 
-import Muka from "../assets/jeannedarc.jpg";
+import Muka from "../assets/face.png";
 
 export default function About() {
   return (
@@ -32,7 +32,7 @@ export default function About() {
       </div>
 
       <div className='block mx-auto lg:mx-0 md:flex mb-12 min-w-screen mt-0 md:mt-[6vh] lg:mt-[8vh]'>
-        <div className='text-white flex flex-col lg:ml-16'>
+        <div className='text-white flex flex-col md:ml-auto'>
           <span className='text-4xl font-sans font-bold'>
             <TextType
               text={["Hey there!", "What's up?", "Welcome!"]}
@@ -43,22 +43,27 @@ export default function About() {
               cursorCharacter="|"
             />
           </span>
-          <p className='w-80 md:w-[520px] lg:w-[560px] [@media(min-width:1320px)]:w-[60vw] mb-5 lg:ml-6 text-lg md:text-xl text-gray-200'>
+          <p className='w-80 md:w-[520px] lg:w-[560px] [@media(min-width:1320px)]:w-[60vw] mb-5 text-lg md:text-xl text-gray-200'>
             My name is <span className='text-white'>Dhabit Muhammad Faqih</span>, a passionate software developer who loves exploring new technologies and turning ideas into real, working solutions. With a strong curiosity for learning, I constantly challenge myself to improve both in frontend and backend development, making sure the projects I build are efficient, modern, and scalable.
           </p>
-          <p className='w-80 md:w-[520px] lg:w-[560px] [@media(min-width:1320px)]:w-[60vw] mb-5 lg:ml-6 text-lg md:text-xl text-gray-200'>
+          <p className='w-80 md:w-[520px] lg:w-[560px] [@media(min-width:1320px)]:w-[60vw] mb-5 text-lg md:text-xl text-gray-200'>
             Beyond coding, I enjoy solving problems and finding the most effective way to deliver clean, maintainable solutions. For me, technology is not just a tool, but also a way to create meaningful impact and help people through innovative applications.
           </p>
         </div>
-        <div className='ml-auto lg:mr-[12vw]'>
+        <div className='flex flex-col lg:flex-row ml-auto lg:mr-[8vw]'>
           <img
             src={Muka}
-            className='mx-auto w-32 h-32 md:h-48 md:w-48 lg:h-64 lg:w-64 rounded-full border-2'
+            className='mx-auto w-32 h-32 md:h-48 md:w-48 lg:h-64 lg:w-64 rounded-full border-2 shadow-[0_0_10px_2px_rgba(0,255,255,0.25)] hover:blur-sm peer'
           />
+          <div className='flex flex-row md:flex-col gap-5 justify-between mt-5 lg:mt-0 lg:ml-6 opacity-0 peer-hover:opacity-100 cursor-default text-center'>
+            <span className='bg-slate-500 px-1 text-white rounded border-stone-50 border-[1px]'>Devaccto RPL</span>
+            <span className='bg-slate-500 px-1 text-white rounded border-stone-50 border-[1px]'>15 Years Old</span>
+            <span className='bg-slate-500 px-1 text-white rounded border-stone-50 border-[1px]'>Plus PENUS</span>
+          </div>
         </div>
       </div>
 
-      <div className='md:mx-auto md:w-11/12 px-9 mt-[4vh] md:mt-[8vh] lg:mt-[14vh] md:flex md:flex-wrap gap-4'>
+      <div className='md:mx-auto md:w-[95%] px-9 mt-[4vh] md:mt-[8vh] lg:mt-[14vh] md:flex md:flex-wrap gap-4'>
         <div className="bg-white/10 backdrop-blur-md rounded-xl shadow-lg p-3 mb-2 mx-auto border-2 border-white/5 hover:border-white flex-1">
           <div className="flex flex-col items-center md:items-start text-center md:text-left px-4 md:px-8 py-4">
             <div className='flex justify-between items-center w-full'>
@@ -73,7 +78,7 @@ export default function About() {
         </div>
 
         <div className="bg-white/10 backdrop-blur-md rounded-xl shadow-lg p-3 mb-2 mx-auto border-2 border-white/5 hover:border-white flex-1">
-          <div className="flex flex-col items-center md:items-start text-center md:text-left px-4 md:px-8 py-4 mt-6 md:mt-0">
+          <div className="flex flex-col items-center md:items-start text-center md:text-left px-4 md:px-8 py-4">
             <div className='flex justify-between items-center w-full'>
                 <svg xmlns="http://www.w3.org/2000/svg" className="h-12 w-12 text-white p-2 bg-gray-500 border-2 border-white/20 rounded-lg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                   <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
@@ -90,7 +95,7 @@ export default function About() {
         </div>
 
         <div className="bg-white/10 backdrop-blur-md rounded-xl shadow-lg p-3 mb-2 mx-auto border-2 border-white/5 hover:border-white flex-1">
-          <div className="flex flex-col items-center md:items-start text-center md:text-left px-4 md:px-8 py-4 mt-6 md:mt-0">
+          <div className="flex flex-col items-center md:items-start text-center md:text-left px-4 md:px-8 py-4">
             <div className='flex justify-between items-center w-full'>
                 <svg xmlns="http://www.w3.org/2000/svg" className="h-12 w-12 text-white p-2 bg-gray-500 border-2 border-white/20 rounded-lg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                   <path d="M22 12h-4l-3 9L9 3l-3 9H2"></path>

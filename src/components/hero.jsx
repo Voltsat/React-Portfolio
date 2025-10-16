@@ -1,4 +1,4 @@
-import { Github, Linkedin, Mail, ArrowRight, UserStar, PanelsTopLeft } from 'lucide-react';
+import { Github, Linkedin, Mail, ArrowRight, UserStar, PanelsTopLeft, ArrowDown } from 'lucide-react';
 import TextType from './animation/textType';
 
 
@@ -7,11 +7,6 @@ export default
   function Hero() {
   return (
     <section className="flex flex-col text-center min-h-screen justify-center z-10 relative motion-scale-in-[0.25] motion-blur-in-[10px] motion-delay-[0.25s]/blur motion-ease-linear">
-      <div className="flex flex-wrap mb-8 justify-center gap-3 md:gap-12">
-        <span className="bg-gray-800/50 border-gray-700 border-[1px] text-white px-2 py-1 md:px-3 md:py-1 rounded-3xl hover:bg-gray-800/100 hover:-translate-y-1">Devaccto RPL</span>
-        <span className="bg-gray-800/50 border-gray-700 border-[1px] text-white px-2 py-1 md:px-3 md:py-1 rounded-3xl hover:bg-gray-800/100 hover:-translate-y-1">Plus Pelita Nusantara</span>
-        <span className="bg-gray-800/50 border-gray-700 border-[1px] text-white px-2 py-1 md:px-3 md:py-1 rounded-3xl hover:bg-gray-800/100 hover:-translate-y-1">15 Years Old</span>
-      </div>
       <div className="flex gap-4 mx-auto">
         <h1 className="text-xl md:text-3xl font-thin text-white mb-3">Hi, I am</h1>
         <span className="text-2xl md:text-6xl font-bold mb-2 md:mb-5 text-white z-10">
@@ -26,7 +21,7 @@ export default
         </span>
       </div>
       <h2 className="text-3xl md:text-8xl font-semibold mb-6 text-white">FullStack Developer</h2>
-      <p className="text-neutral-300 text-sm md:text-lg w-96 md:w-[768px] mx-auto">Building products that matter. I am a FullStack Developer dedicated to designing and implementing high-performance, scalable systems that solve complex business challenges.</p>
+      <p className="text-neutral-300 text-sm md:text-lg w-96 md:w-[768px] max-w-full mx-auto">Building products that matter. I am a FullStack Developer dedicated to designing and implementing high-performance, scalable systems that solve complex business challenges.</p>
       <div className="flex justify-center space-x-6 mb-8 text-zinc-300 mt-4">
         <a href="https://github.com/Voltsat" target="_blank" className=" p-[6px] rounded-md hover:text-white  transition-colors duration-300 ">
           <Github size={24} />
@@ -49,7 +44,9 @@ export default
           <ArrowRight size={18} className="scale-0 group-hover:scale-100 ml-1 transition-all duration-200" />
         </button>
       </div>
-
+      <div className='absolute bottom-12 left-1/2 -translate-x-1/2 animate-bounce'>
+        <ArrowDown size={30} className='text-white' />
+      </div>
     </section>
 
 
