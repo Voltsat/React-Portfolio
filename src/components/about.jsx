@@ -61,14 +61,12 @@ export default function About() {
       <div className='md:mx-auto md:w-11/12 px-9 mt-[4vh] md:mt-[8vh] lg:mt-[14vh] md:flex md:flex-wrap gap-4'>
         <div className="bg-white/10 backdrop-blur-md rounded-xl shadow-lg p-3 mb-2 mx-auto border-2 border-white/5 hover:border-white flex-1">
           <div className="flex flex-col items-center md:items-start text-center md:text-left px-4 md:px-8 py-4">
-            <div className='flex items-center w-full'>
-              <div className="flex items-center space-x-10 mb-2">
+            <div className='flex justify-between items-center w-full'>
                 <svg xmlns="http://www.w3.org/2000/svg" className="h-12 w-12 text-white p-2 bg-gray-500 border-2 border-white/20 rounded-lg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                   <path d="M12 2L2 7l10 5 10-5-10-5zM2 170l10 5 10-5M2 12l10 5 10-5"></path>
                 </svg>
                 <h3 className="text-xl font-semibold text-cyan-400">Created Project</h3>
-              </div>
-              <p className='text-2xl text-white p-2 bg-white/20 rounded-md w-12 flex justify-center ml-auto'>1</p>
+              <p className='text-2xl text-white p-2 bg-white/20 rounded-md w-12 flex justify-center'>1</p>
             </div>
             <p className="mt-2 text-gray-300 mx-auto">Projects that I have created show my journey of learning and building useful applications.</p>
           </div>
@@ -76,8 +74,7 @@ export default function About() {
 
         <div className="bg-white/10 backdrop-blur-md rounded-xl shadow-lg p-3 mb-2 mx-auto border-2 border-white/5 hover:border-white flex-1">
           <div className="flex flex-col items-center md:items-start text-center md:text-left px-4 md:px-8 py-4 mt-6 md:mt-0">
-            <div className='flex items-center w-full'>
-              <div className="flex items-center space-x-10 mb-2">
+            <div className='flex justify-between items-center w-full'>
                 <svg xmlns="http://www.w3.org/2000/svg" className="h-12 w-12 text-white p-2 bg-gray-500 border-2 border-white/20 rounded-lg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                   <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
                   <polyline points="14 2 14 8 20 8"></polyline>
@@ -86,8 +83,7 @@ export default function About() {
                   <line x1="10" y1="9" x2="8" y2="9"></line>
                 </svg>
                 <h3 className="text-xl font-semibold text-cyan-400">Owned Certificate</h3>
-              </div>
-              <p className='text-2xl text-white p-2 bg-white/20 rounded-md w-12 flex justify-center ml-auto'>5</p>
+              <p className='text-2xl text-white p-2 bg-white/20 rounded-md w-12 flex justify-center'>5</p>
             </div>
             <p className="mt-2 text-gray-300 mx-auto">Certificates that I have earned reflect the skills and knowledge I have achieved so far.</p>
           </div>
@@ -95,14 +91,12 @@ export default function About() {
 
         <div className="bg-white/10 backdrop-blur-md rounded-xl shadow-lg p-3 mb-2 mx-auto border-2 border-white/5 hover:border-white flex-1">
           <div className="flex flex-col items-center md:items-start text-center md:text-left px-4 md:px-8 py-4 mt-6 md:mt-0">
-            <div className='flex items-center w-full'>
-              <div className="flex items-center space-x-10 mb-2">
+            <div className='flex justify-between items-center w-full'>
                 <svg xmlns="http://www.w3.org/2000/svg" className="h-12 w-12 text-white p-2 bg-gray-500 border-2 border-white/20 rounded-lg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                   <path d="M22 12h-4l-3 9L9 3l-3 9H2"></path>
                 </svg>
                 <h3 className="text-xl font-semibold text-cyan-400">Years of Experience</h3>
-              </div>
-              <p className='text-2xl text-white p-2 bg-white/20 rounded-md w-12 flex justify-center ml-auto'>1</p>
+              <p className='text-2xl text-white p-2 bg-white/20 rounded-md w-12 flex justify-center'>1</p>
             </div>
             <p className="mt-2 text-gray-300 mx-auto">My experience in programming represents the growth and challenges I have faced while improving my skills.</p>
           </div>
