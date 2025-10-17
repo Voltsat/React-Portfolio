@@ -6,7 +6,7 @@ import TextType from './animation/textType';
 export default
   function Hero() {
   return (
-    <section className="flex flex-col text-center min-h-screen justify-center z-10 relative motion-scale-in-[0.25] motion-blur-in-[10px] motion-delay-[0.25s]/blur motion-ease-linear">
+    <section id='home' className="flex flex-col text-center min-h-screen justify-center z-10 relative motion-scale-in-[0.25] motion-blur-in-[10px] motion-delay-[0.25s]/blur motion-ease-linear">
       <div className="flex gap-4 mx-auto">
         <h1 className="text-xl md:text-3xl font-thin text-white mb-3">Hi, I am</h1>
         <span className="text-2xl md:text-6xl font-bold mb-2 md:mb-5 text-white z-10">

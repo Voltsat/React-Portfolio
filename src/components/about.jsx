@@ -7,7 +7,7 @@ import { Crown, Clock, School } from 'lucide-react';
 
 export default function About() {
   return (
-    <section className="pb-6 z-10 relative bg-transparent flex flex-col">
+    <section id='about' className="pb-6 z-10 relative bg-transparent flex flex-col">
       <div className='flex flex-col items-center'>
         <h2 className="text-5xl font-bold text-white mt-20">
           <TrueFocus
@@ -34,7 +34,7 @@ export default function About() {
 
       <div className='block mx-auto lg:mx-0 md:flex mb-12 min-w-screen mt-0 md:mt-[6vh] lg:mt-[8vh]'>
         <div className='text-white flex flex-col md:ml-auto'>
-          <span className='text-4xl font-sans font-bold'>
+          <span className='mx-auto md:mx-0 text-4xl font-sans font-bold'>
             <TextType
               text={["Hey there!", "What's up?", "Welcome!"]}
               textColors={["#06b6d4", "#10b981", "#8b5cf6"]}
@@ -44,10 +44,10 @@ export default function About() {
               cursorCharacter="|"
             />
           </span>
-          <p className='w-80 md:w-[520px] lg:w-[560px] [@media(min-width:1320px)]:w-[60vw] mb-5 text-lg md:text-xl text-gray-200'>
+          <p className='w-80 md:w-[520px] lg:w-[560px] [@media(min-width:1320px)]:w-[60vw] mx-auto mb-5 text-lg md:text-xl text-gray-200'>
             My name is <span className='text-white'>Dhabit Muhammad Faqih</span>, a passionate software developer who loves exploring new technologies and turning ideas into real, working solutions. With a strong curiosity for learning, I constantly challenge myself to improve both in frontend and backend development, making sure the projects I build are efficient, modern, and scalable.
           </p>
-          <p className='w-80 md:w-[520px] lg:w-[560px] [@media(min-width:1320px)]:w-[60vw] mb-5 text-lg md:text-xl text-gray-200'>
+          <p className='w-80 md:w-[520px] lg:w-[560px] [@media(min-width:1320px)]:w-[60vw] mx-auto mb-5 text-lg md:text-xl text-gray-200'>
             Beyond coding, I enjoy solving problems and finding the most effective way to deliver clean, maintainable solutions. For me, technology is not just a tool, but also a way to create meaningful impact and help people through innovative applications.
           </p>
         </div>
@@ -57,9 +57,9 @@ export default function About() {
             className='mx-auto w-32 h-32 md:h-48 md:w-48 lg:h-64 lg:w-64 rounded-full border-2 shadow-[0_0_10px_2px_rgba(0,255,255,0.25)] hover:blur-sm peer'
           />
           <div className='flex flex-row md:flex-col gap-5 justify-between mt-5 lg:mt-0 lg:ml-6 opacity-0 peer-hover:opacity-100 cursor-default text-center'>
-            <span className='text-white gap-2 flex'><Crown/>Devaccto RPL</span>
-            <span className='text-white gap-2 flex'><Clock/>15 Years Old</span>
-            <span className='text-white gap-2 flex'><School/>Plus PENUS</span>
+            <span className='text-white gap-2 flex'><Crown className='bg-slate-700 p-[2px] rounded-md'/>Devaccto RPL</span>
+            <span className='text-white gap-2 flex'><Clock className='bg-slate-700 p-[2px] rounded-md'/>15 Years Old</span>
+            <span className='text-white gap-2 flex'><School className='bg-slate-700 p-[2px] rounded-md'/>Plus PENUS</span>
           </div>
         </div>
       </div>
