@@ -36,7 +36,7 @@ export default function Navbar() {
         <li className="relative cursor-pointer after:content-[''] after:absolute after:w-full after:h-[2px] after:bg-blue-400 after:left-0 after:bottom-0 after:scale-x-0 after:origin-center after:transition-transform after:duration-300 hover:after:scale-x-100 hover:text-white"><a href="https://www.youtube.com/">Skills</a></li>
         <li className="relative cursor-pointer after:content-[''] after:absolute after:w-full after:h-[2px] after:bg-blue-400 after:left-0 after:bottom-0 after:scale-x-0 after:origin-center after:transition-transform after:duration-300 hover:after:scale-x-100 hover:text-white"><a href="https://www.youtube.com/">Contact</a></li>
       </ul>
-        <li className="hidden md:flex text-2xl mr-3 text-white bg-sky-500 py-1 px-2 rounded-md hover:bg-black/50"><a href="https://www.youtube.com/" className="flex h-full items-center gap-2"><FileUser />Download CV</a></li>
+        <li className="group transition-all duration-200 hidden md:flex text-2xl mr-3 text-white bg-sky-500 py-1 px-2 rounded-md hover:bg-gray-700"><a href="https://www.youtube.com/" className="flex h-full items-center gap-2"><FileUser className="group-hover:text-sky-300"/>Download CV</a></li>
 
       {/* Hamburger */}
       <button onClick={() => setIsOpen(!isOpen)} className="md:hidden flex flex-col gap-1 justify-center ml-auto relative w-8 h-8">

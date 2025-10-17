@@ -3,6 +3,7 @@ import TrueFocus from './animation/trueFocus';
 import TextType from './animation/textType';
 
 import Muka from "../assets/face.png";
+import { Crown, Clock, School } from 'lucide-react';
 
 export default function About() {
   return (
@@ -56,9 +57,9 @@ export default function About() {
             className='mx-auto w-32 h-32 md:h-48 md:w-48 lg:h-64 lg:w-64 rounded-full border-2 shadow-[0_0_10px_2px_rgba(0,255,255,0.25)] hover:blur-sm peer'
           />
           <div className='flex flex-row md:flex-col gap-5 justify-between mt-5 lg:mt-0 lg:ml-6 opacity-0 peer-hover:opacity-100 cursor-default text-center'>
-            <span className='bg-slate-500 px-1 text-white rounded border-stone-50 border-[1px]'>Devaccto RPL</span>
-            <span className='bg-slate-500 px-1 text-white rounded border-stone-50 border-[1px]'>15 Years Old</span>
-            <span className='bg-slate-500 px-1 text-white rounded border-stone-50 border-[1px]'>Plus PENUS</span>
+            <span className='text-white gap-2 flex'><Crown/>Devaccto RPL</span>
+            <span className='text-white gap-2 flex'><Clock/>15 Years Old</span>
+            <span className='text-white gap-2 flex'><School/>Plus PENUS</span>
           </div>
         </div>
       </div>
