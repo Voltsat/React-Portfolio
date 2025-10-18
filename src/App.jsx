@@ -1,6 +1,7 @@
 import Navbar from './components/navbar';
 import Hero from './components/hero';
 import About from './components/about'
+import Project from './components/project'
 
 import ClickSpark from './components/animation/clickSpark';
 
@@ -24,6 +25,7 @@ function App() {
     <Navbar />
     <Hero />
     <About />
+    <Project />
     </ClickSpark>
   </div>
 

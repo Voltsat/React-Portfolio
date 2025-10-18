@@ -6,7 +6,7 @@ import TextType from './animation/textType';
 export default
   function Hero() {
   return (
-    <section id='home' className="flex flex-col text-center min-h-screen justify-center z-10 relative motion-scale-in-[0.25] motion-blur-in-[10px] motion-delay-[0.25s]/blur motion-ease-linear">
+    <section id='home' className="mx-4 flex flex-col text-center min-h-screen justify-center z-10 relative motion-scale-in-[0.25] motion-blur-in-[10px] motion-delay-[0.25s]/blur motion-ease-linear">
       <div className="flex gap-4 mx-auto">
         <h1 className="text-xl md:text-3xl font-thin text-white mb-3">Hi, I am</h1>
         <span className="text-2xl md:text-6xl font-bold mb-2 md:mb-5 text-white z-10">
@@ -34,7 +34,7 @@ export default
         </a>
       </div>
       <div className="flex justify-center space-x-4 mb-8">
-        <button className="flex bg-blue-600 px-6 py-3 rounded-lg font-medium border border-gray-600 text-white hover:bg-blue-700 motion-scale-in-[0.5] motion-translate-x-in-[-141%] motion-translate-y-in-[4%] motion-opacity-in-[0%] motion-rotate-in-[-10deg] motion-blur-in-[5px] motion-duration-[0.35s] motion-duration-[0.53s]/scale motion-duration-[0.53s]/translate motion-duration-[0.63s]/rotate motion-ease-bounce">
+        <button className="flex items-center bg-blue-600 px-6 py-3 rounded-lg font-medium border border-gray-600 text-white hover:bg-blue-700 motion-scale-in-[0.5] motion-translate-x-in-[-141%] motion-translate-y-in-[4%] motion-opacity-in-[0%] motion-rotate-in-[-10deg] motion-blur-in-[5px] motion-duration-[0.35s] motion-duration-[0.53s]/scale motion-duration-[0.53s]/translate motion-duration-[0.63s]/rotate motion-ease-bounce">
           <UserStar className="mr-1" />
           <span>Get in Touch</span>
         </button>

@@ -61,9 +61,9 @@ export default function Navbar() {
         {menuItems.map((item)=>(
           <li
           key={item.id}
-          className={`text-gray-200 border-transparent border-2 hover:-translate-y-1 duration-500 ${
+          className={`text-gray-200 px-3 duration-400 hover:translate-x-[2px] ${
             activeSection === item.id
-            ? "backdrop-filter backdrop-blur-sm border-[1px] border-white bg-gray-700 text-white px-2 rounded-md"
+            ? "text-sky-400 bg-slate-700 px-3 rounded-3xl"
             : "text-gray-200"
           }`}
           >
@@ -94,7 +94,7 @@ export default function Navbar() {
               <a href={`#${item.id}`} onClick={() => setIsOpen(false)} className="block" >{item.label}</a>
             </li>
           ))}
-          <li className="relative cursor-pointer"></li>
+          <li className="relative cursor-pointer"><a href="#home" onClick={() => setIsOpen(false)}>Download CV</a></li>
           </ul>
         </div>
       )}
