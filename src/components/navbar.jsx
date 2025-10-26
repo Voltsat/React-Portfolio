@@ -63,7 +63,7 @@ export default function Navbar() {
           key={item.id}
           className={`text-gray-200 px-3 duration-400 hover:translate-x-[2px] ${
             activeSection === item.id
-            ? "text-sky-400 bg-slate-700 px-3 rounded-3xl"
+            ? "text-sky-400 bg-slate-700 px-3 rounded-md"
             : "text-gray-200"
           }`}
           >
