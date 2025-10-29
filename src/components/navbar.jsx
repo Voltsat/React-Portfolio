@@ -24,7 +24,7 @@ export default function Navbar() {
   const menuItems = [
     {id: "home", label: "Home"},
     {id: "about", label: "About Me"},
-    {id: "projects", label: "Projects"},
+    {id: "project", label: "Projects"},
     {id: "skills", label: "Skills"},
     {id: "contact", label: "Contact"},
   ]
@@ -40,7 +40,7 @@ export default function Navbar() {
           }
         });
       },
-      {threshold: 0.6}
+      {threshold: 0.5}
     );
 
     section.forEach((section) => observer.observe(section));

@@ -15,7 +15,7 @@ export default function Projects() {
       image: portfolioIMG,
     },
     {
-      title: "Talon kikir Asem",
+      title: "Lorem Ipsum Dolor Sit Amet",
       desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.",
       stats: [
         { label: "Events/Day", value: "1M+" },
@@ -26,7 +26,7 @@ export default function Projects() {
       image: placeHolder,
     },
     {
-      title: "E Commerce Ghostfinn",
+      title: "Unde Omnis Consectetur Adipiscing",
       desc: "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit.",
       stats: [
         { label: "Events/Day", value: "1M+" },
@@ -39,7 +39,7 @@ export default function Projects() {
   ];
 
   return (
-  <section id="projects" className="min-h-screen text-gray-100 px-8 py-20">
+  <section id="project" className="min-h-screen text-gray-100 px-8 py-20">
     <div className="max-w-screen-xl mx-auto">
       <div className="text-center">
         <h2 className="text-5xl font-bold text-white">Featured Projects</h2>
