@@ -3,6 +3,5 @@
 @tailwind utilities;
 
 * {
-    scroll-behavior: smooth;
     @apply transition-all duration-300 ease-in-out;
 }   
