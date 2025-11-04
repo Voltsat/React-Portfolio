@@ -3,7 +3,8 @@ import TrueFocus from './animation/trueFocus';
 import TextType from './animation/textType';
 
 import Muka from "../assets/face.png";
-import { Crown, Clock, School } from 'lucide-react';
+import AnimatedContent from './animation/AnimatedContent'
+import StarBorder from './StarBorder'
 
 export default function About() {
   return (
@@ -32,7 +33,7 @@ export default function About() {
         </p>
       </div>
 
-      <div className='block mx-auto lg:mx-0 md:flex mb-12 min-w-screen mt-0 md:mt-[6vh] lg:mt-[8vh]'>
+      <div className='block mx-auto md:flex mb-12 min-w-screen justify-center mt-0 md:mt-[6vh] lg:mt-[8vh]'>
         <div className='text-white flex flex-col md:ml-auto'>
           <span className='mx-auto md:mx-0 text-4xl font-sans font-bold'>
             <TextType
@@ -51,19 +52,36 @@ export default function About() {
             Beyond coding, I enjoy solving problems and finding the most effective way to deliver clean, maintainable solutions. For me, technology is not just a tool, but also a way to create meaningful impact and help people through innovative applications.
           </p>
         </div>
-        <div className='flex flex-col lg:flex-row ml-auto lg:mr-[8vw]'>
+
+      
+      <div className="relative group rounded-full w-fit mx-auto p-[4px] bg-gradient-to-tr from-blue-500 via-purple-500 to-pink-500 animate-gradient">
+        <div className="rounded-full overflow-hidden w-48 h-48 sm:w-56 sm:h-56 border-4 border-gray-900 shadow-2xl transition-all duration-500 group-hover:scale-105 group-hover:shadow-blue-500/50">
           <img
-            src={Muka}
-            className='mx-auto w-32 h-32 md:h-48 md:w-48 lg:h-64 lg:w-64 rounded-full border-2 shadow-[0_0_10px_2px_rgba(0,255,255,0.25)] hover:blur-sm peer'
+            src={Muka} // ganti ini dengan foto kamu
+            alt="Profile"
+            className="w-full h-full object-cover grayscale hover:grayscale-0 transition duration-700"
           />
-          <div className='flex flex-row md:flex-col gap-5 justify-between mt-5 lg:mt-0 lg:ml-6 opacity-0 peer-hover:opacity-100 cursor-default text-center'>
-            <span className='text-white gap-2 flex'><Crown className='bg-slate-700 p-[2px] rounded-md'/>Devaccto RPL</span>
-            <span className='text-white gap-2 flex'><Clock className='bg-slate-700 p-[2px] rounded-md'/>15 Years Old</span>
-            <span className='text-white gap-2 flex'><School className='bg-slate-700 p-[2px] rounded-md'/>Plus PENUS</span>
-          </div>
         </div>
+
+        {/* Glow effect */}
+        <div className="absolute inset-0 blur-xl opacity-30 group-hover:opacity-60 bg-gradient-to-tr from-blue-500 via-purple-500 to-pink-500 rounded-full -z-10 transition duration-700"></div>
       </div>
 
+
+      </div>
+
+      <AnimatedContent
+        distance={150}
+        direction="vertical"
+        reverse={false}
+        duration={0.5}
+        ease="power3.out"
+        initialOpacity={0.2}
+        animateOpacity
+        scale={1}
+        threshold={0.1}
+        delay={0.1}
+      >
       <div className='md:mx-auto md:w-[95%] px-9 mt-[4vh] md:mt-[8vh] lg:mt-[14vh] md:flex md:flex-wrap gap-4'>
         <div className="bg-white/10 backdrop-blur-md rounded-xl shadow-lg p-3 mb-2 mx-auto border-2 border-white/5 hover:border-white flex-1">
           <div className="flex flex-col items-center md:items-start text-center md:text-left px-4 md:px-8 py-4">
@@ -108,6 +126,10 @@ export default function About() {
           </div>
         </div>
       </div>
+      </AnimatedContent>
+
+
+
     </section>
   );
 }
