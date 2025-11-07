@@ -1,7 +1,7 @@
 import { useRef, useEffect, useState } from 'react';
 import { Renderer, Program, Triangle, Mesh } from 'ogl';
 
-const DEFAULT_COLOR = '#ffff';
+const DEFAULT_COLOR = '#ffffff';
 
 const hexToRgb = hex => {
   const m = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(hex);
@@ -33,13 +33,13 @@ const getAnchorAndDir = (origin, w, h) => {
 const LightRays = ({
   raysOrigin = 'top-center',
   raysColor = DEFAULT_COLOR,
-  raysSpeed = 1,
-  lightSpread = 1,
-  rayLength = 2,
+  raysSpeed = 1.4,
+  lightSpread = 0.7,
+  rayLength = 2.6,
   pulsating = false,
-  fadeDistance = 1.0,
-  saturation = 1.0,
-  followMouse = true,
+  fadeDistance = 1.4,
+  saturation = 2.0,
+  followMouse = false,
   mouseInfluence = 0.1,
   noiseAmount = 0.0,
   distortion = 0.0,
@@ -59,10 +59,13 @@ const LightRays = ({
   useEffect(() => {
     if (!containerRef.current) return;
 
-    observerRef.current = new IntersectionObserver(entries => {
-      const entry = entries[0];
-      setIsVisible(entry.isIntersecting);
-    }, { threshold: 0.1 });
+    observerRef.current = new IntersectionObserver(
+      entries => {
+        const entry = entries[0];
+        setIsVisible(entry.isIntersecting);
+      },
+      { threshold: 0.1 }
+    );
 
     observerRef.current.observe(containerRef.current);
 
@@ -388,7 +391,8 @@ void main() {
   return (
     <div
       ref={containerRef}
-      className={`w-full h-full pointer-events-none z-[3] overflow-hidden relative ${className}`.trim()} />
+      className={`w-full h-full pointer-events-none z-[3] overflow-hidden relative ${className}`.trim()}
+    />
   );
 };
 

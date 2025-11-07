@@ -54,7 +54,7 @@ export default function About() {
         </div>
 
       
-      <div className="relative group rounded-full w-fit mx-auto p-[4px] bg-gradient-to-tr from-blue-500 via-purple-500 to-pink-500 animate-gradient">
+      <div className="relative group rounded-full w-fit h-fit mx-auto p-[4px] bg-gradient-to-tr from-blue-500 via-purple-500 to-pink-500 animate-gradient">
         <div className="rounded-full overflow-hidden w-48 h-48 sm:w-56 sm:h-56 border-4 border-gray-900 shadow-2xl transition-all duration-500 group-hover:scale-105 group-hover:shadow-blue-500/50">
           <img
             src={Muka} // ganti ini dengan foto kamu
