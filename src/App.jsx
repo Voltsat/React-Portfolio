@@ -5,8 +5,13 @@ import Navbar from "./components/navbar";
 import Hero from "./components/hero";
 import About from "./components/about";
 import Project from "./components/project";
+import Skills from "./components/skill";
+
+
 import ClickSpark from "./components/animation/clickSpark";
 import Cursor from "./components/cursor";
+import LightRays from './components/LightRays';
+
 
 function App() {
   useEffect(() => {
@@ -30,20 +35,25 @@ function App() {
   }, []);
 
   return (
-    <div className="min-h-screen w-full bg-black relative overflow-x-hidden">
-      {/* Background mist */}
-      <div
-        className="absolute inset-0 z-0"
-        style={{
-          backgroundImage: `
-            radial-gradient(circle at 50% 100%, rgba(70, 85, 110, 0.35) 0%, transparent 60%),
-            radial-gradient(circle at 50% 100%, rgba(99, 102, 241, 0.3) 0%, transparent 70%),
-            radial-gradient(circle at 50% 100%, rgba(181, 184, 208, 0.25) 0%, transparent 80%)
-          `,
-        }}
-      />
-      <Cursor />
+    <div className="bg-slate-900 w-full">
+      
+    <div className="fixed inset-0 z-0">
+  <LightRays
+    raysOrigin="top-center"
+    raysColor="#686868"
+    raysSpeed={1.5}
+    lightSpread={0.8}
+    rayLength={1.2}
+    followMouse={true}
+    mouseInfluence={0.1}
+    noiseAmount={0.1}
+    distortion={0.05}
+    className="custom-rays"
+  />
 
+    </div>
+    <div>
+      <Cursor />
       <ClickSpark
         sparkColor="#fff"
         sparkSize={10}
@@ -55,8 +65,16 @@ function App() {
         <Hero />
         <About />
         <Project />
+        <Skills />
       </ClickSpark>
+
     </div>
+
+    </div>
+
+
+
+
   );
 }
 

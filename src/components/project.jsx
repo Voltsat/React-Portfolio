@@ -15,7 +15,11 @@ export default function Projects() {
       image: portfolioIMG,
     },
     {
+<<<<<<< HEAD
       title: "Lorem Ipsum Dolor Sit Amet",
+=======
+      title: "Project Uno",
+>>>>>>> ca9c3bb7e84eaf92d9572aa57406a1b9f16e4f5e
       desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.",
       stats: [
         { label: "Events/Day", value: "1M+" },
@@ -26,7 +30,11 @@ export default function Projects() {
       image: placeHolder,
     },
     {
+<<<<<<< HEAD
       title: "Unde Omnis Consectetur Adipiscing",
+=======
+      title: "Project Dos",
+>>>>>>> ca9c3bb7e84eaf92d9572aa57406a1b9f16e4f5e
       desc: "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit.",
       stats: [
         { label: "Events/Day", value: "1M+" },
@@ -39,7 +47,11 @@ export default function Projects() {
   ];
 
   return (
+<<<<<<< HEAD
   <section id="project" className="min-h-screen text-gray-100 px-8 py-20">
+=======
+  <section id="projects" className="min-h-screen text-gray-100 px-8 py-20 z-10">
+>>>>>>> ca9c3bb7e84eaf92d9572aa57406a1b9f16e4f5e
     <div className="max-w-screen-xl mx-auto">
       <div className="text-center">
         <h2 className="text-5xl font-bold text-white">Featured Projects</h2>
