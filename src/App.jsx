@@ -10,12 +10,11 @@ import Cursor from "./components/cursor";
 
 function App() {
   useEffect(() => {
-    // ✅ Versi ringan banget tapi tetap halus
     const lenis = new Lenis({
-      duration: 1.4,          // 0.6–0.8 = halus tapi tetap responsif
-      easing: (t) => 1 - Math.pow(1 - t, 3), // cubic easing, licin tapi ringan
+      duration: 1.4,
+      easing: (t) => 1 - Math.pow(1 - t, 3),
       smoothWheel: true,
-      smoothTouch: false,     // matikan biar gak drop FPS di HP
+      smoothTouch: false,
       touchMultiplier: 1.2,
     });
 
@@ -27,7 +26,6 @@ function App() {
 
     frame = requestAnimationFrame(raf);
 
-    // ✅ Bersihin animasi kalau komponen di-unmount
     return () => cancelAnimationFrame(frame);
   }, []);
 
