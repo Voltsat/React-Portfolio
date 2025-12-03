@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import { Mail, MapPin, Send, Linkedin, Github, Instagram } from 'lucide-react';
 
-// GANTI URL INI DENGAN ENDPOINT FORMSPREE UNIK ANDA!
 const FORMSPREE_URL = 'https://formspree.io/f/xgvgyddb'; 
 
 export default function Contact() {
@@ -32,7 +31,6 @@ export default function Contact() {
     }
 
     try {
-      // --- LOGIKA KIRIM FORM KE FORMSPREE ---
       const response = await fetch(FORMSPREE_URL, {
         method: 'POST',
         headers: {
@@ -42,17 +40,14 @@ export default function Contact() {
       });
 
       if (response.ok) {
-        // Jika berhasil (Status 200/OK dari Formspree)
         setStatusMessage("✅ Message successfully sent! Thank you!");
-        setFormData({ name: '', email: '', message: '' }); // Bersihkan form
+        setFormData({ name: '', email: '', message: '' });
       } else {
-        // Jika Formspree mengembalikan error (misalnya validasi gagal)
         const data = await response.json();
         const errorMessage = data.error || 'Server responded with an error.';
         setStatusMessage(`❌ Error sending message: ${errorMessage}`);
       }
     } catch (error) {
-      // Jika ada error jaringan
       setStatusMessage("❌ Network error or failed to send the message. Try again.");
     } finally {
       setIsSubmitting(false);
@@ -100,13 +95,13 @@ export default function Contact() {
             Follow Me
           </h3>
           <div className="flex gap-4 text-zinc-300">
-            <a href="https://linkedin.com/in/dh" target="_blank" rel="noopener noreferrer" className="p-[6px] rounded-md hover:text-cyan-400 transition-colors duration-300">
+            <a href="https://linkedin.com/in/dh" target="_blank" rel="noopener noreferrer" className="p-[6px] rounded-md hover:text-white transition-colors duration-300">
               <Linkedin size={30} />
             </a>
-            <a href="https://github.com/dh" target="_blank" rel="noopener noreferrer" className="p-[6px] rounded-md hover:text-cyan-400 transition-colors duration-300">
+            <a href="https://github.com/Voltsat" target="_blank" rel="noopener noreferrer" className="p-[6px] rounded-md hover:text-white transition-colors duration-300">
               <Github size={30} />
             </a>
-            <a href="https://instagram.com/dh" target="_blank" rel="noopener noreferrer" className="p-[6px] rounded-md hover:text-cyan-400 transition-colors duration-300">
+            <a href="https://instagram.com/dhabitmfaqih" target="_blank" rel="noopener noreferrer" className="p-[6px] rounded-md hover:text-white transition-colors duration-300">
               <Instagram size={30} />
             </a>
           </div>

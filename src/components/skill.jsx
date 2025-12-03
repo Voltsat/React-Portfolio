@@ -1,24 +1,20 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
 
-// --- IMPORT SWIPER.JS ---
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { Pagination, Navigation } from 'swiper/modules'; // Import module yang diperlukan
+import { Pagination, Navigation } from 'swiper/modules';
 
-// Import gaya dasar Swiper dan modul
 import 'swiper/css';
 import 'swiper/css/pagination';
 import 'swiper/css/navigation'; 
-// --- AKHIR IMPORT SWIPER ---
 
-// Import gambar lokal Anda (Pastikan path ini benar)
 import sertif1 from "../assets/sertif1.png"; 
 import sertif2 from "../assets/sertif2.png"; 
+import sertif3 from "../assets/sertif3.png"; 
+import sertif4 from "../assets/sertif4.png"; 
 
-// Tombol Tab
 const tombol = ["Skills", "Certificate", "Tools"];
 
-// Data Konten
 const content = {
   Skills: [
     { name: "Javascript", gambar: "https://www.w3schools.com/js/img_javascript_480.jpg", persen: 90 },
@@ -30,8 +26,8 @@ const content = {
     { name: "Codelamp Game Developer Certificate", gambar: sertif1 },
     { name: "IDNetworks Capture The Flag Certificate", gambar: sertif2 },
 
-    { name: "Advanced React Mastery", gambar: sertif1 }, 
-    { name: "Tailwind CSS Expert", gambar: sertif2 } 
+    { name: "Codelamp Game Developer Market Certificate", gambar: sertif3 }, 
+    { name: "Codelamp Game Developer Road Map Certificate", gambar: sertif4 } 
   ],
   Tools: [
     { name: "Visual Studio Code", gambar: "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Visual_Studio_Code_1.35_icon.svg/1200px-Visual_Studio_Code_1.35_icon.svg.png" },
@@ -40,7 +36,6 @@ const content = {
   ]
 };
 
-// Skill Card (Tidak Berubah)
 const SkillCard = ({ name, gambar, persen }) => (
   <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} whileHover={{ scale: 1.05 }} className="bg-gray-900/70 backdrop-blur-xl rounded-2xl p-4 flex flex-col items-center shadow-xl border border-cyan-600/40 hover:border-cyan-400 transition-all duration-300">
     <img src={gambar} alt={name} className="w-14 h-14 object-contain mb-3 drop-shadow-lg" />
@@ -54,13 +49,10 @@ const SkillCard = ({ name, gambar, persen }) => (
   </motion.div>
 );
 
-// Certificate Card (Diubah menjadi SwiperSlide content)
 const CertificateCard = ({ name, gambar }) => (
   <motion.div 
-    // Menghapus motion.div luar agar SwiperSlide yang menangani animasi
-    className="bg-gray-900/80 rounded-2xl shadow-xl border border-cyan-600/40 overflow-hidden w-full mx-auto" // Memastikan kartu mengambil lebar penuh SwiperSlide
+    className="bg-gray-900/80 rounded-2xl shadow-xl border border-cyan-600/40 overflow-hidden w-full mx-auto" 
   >
-    {/* Menggunakan min-h-[6rem] (96px) untuk penyejajaran judul */}
     <div className="p-4 bg-gray-950 border-b border-cyan-600 min-h-[6rem] flex items-center justify-center">
       <p className="text-xl text-center font-bold text-cyan-300 leading-snug">{name}</p>
     </div>
@@ -69,7 +61,6 @@ const CertificateCard = ({ name, gambar }) => (
   </motion.div>
 );
 
-// Tool Card (Tidak Berubah)
 const ToolCard = ({ name, gambar }) => (
   <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} whileHover={{ scale: 1.07 }} className="bg-gray-900/70 backdrop-blur-xl rounded-2xl p-4 shadow-lg border border-indigo-500/40 flex flex-col items-center">
     <img src={gambar} alt={name} className="w-14 h-14 object-contain mb-3" />
@@ -93,27 +84,24 @@ export default function Skills() {
 
     if (activeTab === "Certificate") {
       return (
-        // --- CONTAINER SLIDER SWIPER ---
-        // Menambahkan w-4/5 mx-auto agar slider tidak terlalu lebar dan terlihat di tengah
         <div className="p-4 relative w-full max-w-4xl mx-auto"> 
           <Swiper
             modules={[Pagination, Navigation]}
             spaceBetween={30}
-            slidesPerView={1} // Tampilkan 1 slide per view
-            navigation={true} // Aktifkan tombol navigasi (panah)
-            pagination={{ clickable: true }} // Aktifkan pagination (dot di bawah)
-            loop={true} // Ulangi slider
-            className="mySwiper" // Kelas untuk penyesuaian CSS jika diperlukan
+            slidesPerView={1}
+            navigation={true}
+            pagination={{ clickable: true }}
+            loop={true}
+            className="mySwiper"
           >
             {items.map((item, i) => (
-              <SwiperSlide key={i} className="pb-10"> {/* Menambahkan padding bawah untuk dot pagination */}
+              <SwiperSlide key={i} className="pb-10">
                 <div className="flex justify-center">
                     <CertificateCard {...item} />
                 </div>
               </SwiperSlide>
             ))}
           </Swiper>
-          {/* Anda mungkin perlu menambahkan CSS kustom untuk Swiper di file CSS global Anda */}
           <style global jsx>{`
             .swiper-button-prev, .swiper-button-next {
               color: #22d3ee !important; /* Warna panah navigasi cyan */
@@ -127,7 +115,6 @@ export default function Skills() {
             }
           `}</style>
         </div>
-        // --- AKHIR SLIDER SWIPER ---
       );
     }
 
@@ -140,11 +127,11 @@ export default function Skills() {
 
   return (
     <section id="skills" className="min-h-screen pt-20 pb-12 text-white relative">
-      {/* Background Glow */}
+
       <div className="absolute inset-0 bg-gradient-to-b from-black via-gray-900 to-black -z-10"></div>
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[600px] h-[600px] bg-cyan-500/20 blur-[200px] rounded-full -z-10"></div>
 
-      <h2 className="text-5xl font-extrabold text-center mb-12 text-cyan-400 drop-shadow-lg tracking-wide">🚀 My Expertise</h2>
+      <h2 className="text-5xl font-extrabold text-center mb-12 text-white drop-shadow-lg tracking-wide">My Expertise</h2>
 
       {/* Tabs */}
       <div className="flex justify-center mb-10">

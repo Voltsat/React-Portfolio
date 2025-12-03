@@ -4,7 +4,6 @@ import TextType from './animation/textType';
 
 import Muka from "../assets/face.png";
 import AnimatedContent from './animation/AnimatedContent'
-import StarBorder from './StarBorder'
 
 export default function About() {
   return (
@@ -54,22 +53,17 @@ export default function About() {
         </div>
 
       
-      <div className="relative group rounded-full w-fit h-fit mx-auto p-[4px] bg-gradient-to-tr from-blue-500 via-purple-500 to-pink-500 animate-gradient">
-        <div className="rounded-full overflow-hidden w-48 h-48 sm:w-56 sm:h-56 border-4 border-gray-900 shadow-2xl transition-all duration-500 group-hover:scale-105 group-hover:shadow-blue-500/50">
+      <div className="relative w-fit h-fit mx-auto">
+        <div className="rounded-full overflow-hidden w-48 h-48 sm:w-56 sm:h-56 border-2 border-gray-300 shadow-md transition-all duration-500 hover:shadow-lg">
           <img
-            src={Muka} // ganti ini dengan foto kamu
+            src={Muka}
             alt="Profile"
-            className="w-full h-full object-cover grayscale hover:grayscale-0 transition duration-700"
+            className="w-full h-full object-cover transition duration-500"
           />
         </div>
-
-        {/* Glow effect */}
-        <div className="absolute inset-0 blur-xl opacity-30 group-hover:opacity-60 bg-gradient-to-tr from-blue-500 via-purple-500 to-pink-500 rounded-full -z-10 transition duration-700"></div>
       </div>
 
-
       </div>
-
       <AnimatedContent
         distance={150}
         direction="vertical"

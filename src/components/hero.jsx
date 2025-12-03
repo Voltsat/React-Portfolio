@@ -26,29 +26,28 @@ export default
         <a href="https://github.com/Voltsat" target="_blank" className=" p-[6px] rounded-md hover:text-white  transition-colors duration-300 ">
           <Github size={24} />
         </a>
-        <a href="https://linkedin.com/in/your-profile" target="_blank" className=" p-[6px] rounded-md hover:text-white  transition-colors duration-300">
+        <a href="https://imnotoldenoughlol" target="_blank" className=" p-[6px] rounded-md hover:text-white  transition-colors duration-300">
           <Linkedin size={24} />
         </a>
-        <a href="mailto:youremail@example.com" className=" p-[6px] rounded-md hover:text-white  transition-colors duration-300">
+        <a href="mailto:dhabitmuhammadfaqih@gmail.com" className=" p-[6px] rounded-md hover:text-white  transition-colors duration-300">
           <Mail size={24} />
         </a>
       </div>
       <div className="flex justify-center space-x-4 mb-8">
-        <button className="flex items-center bg-blue-600 px-6 py-3 rounded-lg font-medium border border-gray-600 text-white hover:bg-blue-700 motion-scale-in-[0.5] motion-translate-x-in-[-141%] motion-translate-y-in-[4%] motion-opacity-in-[0%] motion-rotate-in-[-10deg] motion-blur-in-[5px] motion-duration-[0.35s] motion-duration-[0.53s]/scale motion-duration-[0.53s]/translate motion-duration-[0.63s]/rotate motion-ease-bounce">
+        <a target='_blank' href='https://wa.me/6285156445976' className="flex items-center bg-blue-600 px-6 py-3 rounded-lg font-medium border border-gray-600 text-white hover:bg-blue-700 motion-scale-in-[0.5] motion-translate-x-in-[-141%] motion-translate-y-in-[4%] motion-opacity-in-[0%] motion-rotate-in-[-10deg] motion-blur-in-[5px] motion-duration-[0.35s] motion-duration-[0.53s]/scale motion-duration-[0.53s]/translate motion-duration-[0.63s]/rotate motion-ease-bounce">
           <UserStar className="mr-1" />
           <span>Get in Touch</span>
-        </button>
-        <button className="flex group items-center bg-transparent pl-6 pr-1 py-3 rounded-lg font-medium border border-gray-600 text-white hover:border-blue-600 hover:pr-4 motion-scale-in-[0.5] motion-translate-x-in-[159%] motion-translate-y-in-[1%] motion-opacity-in-[0%] motion-rotate-in-[12deg] motion-blur-in-[5px] motion-duration-[0.35s] motion-duration-[0.53s]/scale motion-duration-[0.53s]/translate motion-duration-[0.63s]/rotate motion-ease-bounce">
+        </a>
+        <a href='#project' className="flex group items-center bg-transparent pl-6 pr-1 py-3 rounded-lg font-medium border border-gray-600 text-white hover:border-blue-600 hover:pr-4 motion-scale-in-[0.5] motion-translate-x-in-[159%] motion-translate-y-in-[1%] motion-opacity-in-[0%] motion-rotate-in-[12deg] motion-blur-in-[5px] motion-duration-[0.35s] motion-duration-[0.53s]/scale motion-duration-[0.53s]/translate motion-duration-[0.63s]/rotate motion-ease-bounce">
           <PanelsTopLeft className="mr-1" />
           <span>View Projects</span>
           <ArrowRight size={18} className="scale-0 group-hover:scale-100 ml-1 transition-all duration-200" />
-        </button>
+        </a>
       </div>
       <div className='absolute bottom-12 left-1/2 -translate-x-1/2 animate-bounce'>
         <ArrowDown size={30} className='text-white' />
       </div>
     </section>
-
 
   );
 }

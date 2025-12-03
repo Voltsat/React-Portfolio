@@ -9,7 +9,7 @@ export default function Projects() {
       desc: "A personal portfolio website I built using React and Tailwind CSS. It shows who I am, what I do, and the projects I’ve created. This site also helps people reach me easily for collaboration or job opportunities.",
       stats: [
         { label: "Views", value: "1K+" },
-        { label: "Completion", value: "78%" },
+        { label: "Completion", value: "99.9%" },
         { label: "Coffe Cups", value: "20+" },
       ],
       tech: ["React", "Node.js", "Tailwind CSS", "Vite"],
@@ -20,11 +20,11 @@ export default function Projects() {
       title: "Digital Clock",
       desc: "The Digital Clock project is a simple application that displays the current time in hours, minutes, and seconds. It updates automatically every second to show real-time changes.",
       stats: [
-        { label: "Events/Day", value: "1M+" },
-        { label: "Companies", value: "10+" },
-        { label: "Response Time", value: "<100ms" },
+        { label: "Realtime", value: "Live" },
+        { label: "2 Mode", value: "24H/12H" },
+        { label: "Fast Update", value: "<100ms" },
       ],
-      tech: ["Next.js", "TailwindCSS", "Supabase", "Chart.js"],
+      tech: ["HTML", "CSS", "JavaScript"],
       image: digidawIMG,
     },
     {

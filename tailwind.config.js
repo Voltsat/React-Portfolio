@@ -1,7 +1,7 @@
 /** @type {import('tailwindcss').Config} */
 export default {
     darkMode: ["class"],
-    content: ["./index.html", "./src/**/*.{js,jsx}"], // wajib isi, biar Tailwind scan file React
+    content: ["./index.html", "./src/**/*.{js,jsx}"],
   theme: {
   	extend: {
   		borderRadius: {
