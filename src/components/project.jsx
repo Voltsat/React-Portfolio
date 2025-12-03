@@ -1,5 +1,6 @@
 import portfolioIMG from "../assets/portfolio.png";
-import placeHolder from "../assets/placeHold.png"
+import digidawIMG from "../assets/digidaw.png";
+import placeHolder from "../assets/placeHold.png";
 
 export default function Projects() {
   const projects = [
@@ -16,17 +17,15 @@ export default function Projects() {
     },
     {
 
-      title: "Lorem Ipsum Dolor Sit Amet",
-
-      title: "Project Uno",
-      desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.",
+      title: "Digital Clock",
+      desc: "The Digital Clock project is a simple application that displays the current time in hours, minutes, and seconds. It updates automatically every second to show real-time changes.",
       stats: [
         { label: "Events/Day", value: "1M+" },
         { label: "Companies", value: "10+" },
         { label: "Response Time", value: "<100ms" },
       ],
       tech: ["Next.js", "TailwindCSS", "Supabase", "Chart.js"],
-      image: placeHolder,
+      image: digidawIMG,
     },
     {
 

@@ -6,6 +6,7 @@ import Hero from "./components/hero";
 import About from "./components/about";
 import Project from "./components/project";
 import Skills from "./components/skill";
+import Contact from "./components/contact";
 
 
 import ClickSpark from "./components/animation/clickSpark";
@@ -66,6 +67,7 @@ function App() {
         <About />
         <Project />
         <Skills />
+        <Contact />
       </ClickSpark>
 
     </div>
