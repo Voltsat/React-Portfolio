@@ -10,7 +10,6 @@ import Contact from "./components/contact";
 
 
 import ClickSpark from "./components/animation/clickSpark";
-import Cursor from "./components/cursor";
 import LightRays from './components/LightRays';
 
 
