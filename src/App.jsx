@@ -54,7 +54,6 @@ function App() {
 
     </div>
     <div>
-      <Cursor />
       <ClickSpark
         sparkColor="#fff"
         sparkSize={10}
