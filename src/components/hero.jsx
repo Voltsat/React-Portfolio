@@ -20,7 +20,7 @@ export default
           />
         </span>
       </div>
-      <h2 className="text-3xl md:text-8xl font-semibold mb-6 text-white">FullStack Developer</h2>
+      <h2 className="text-3xl md:text-8xl font-semibold mb-6 text-white">Mobile Developer</h2>
       <p className="text-neutral-300 text-sm md:text-lg w-96 md:w-[768px] max-w-full mx-auto">Building products that matter. I am a FullStack Developer dedicated to designing and implementing high-performance, scalable systems that solve complex business challenges.</p>
       <div className="flex justify-center space-x-6 mb-8 text-zinc-300 mt-4">
         <a href="https://github.com/Voltsat" target="_blank" className=" p-[6px] rounded-md hover:text-white  transition-colors duration-300 ">
