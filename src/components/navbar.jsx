@@ -79,7 +79,7 @@ export default function Navbar() {
           </ul>
 
           <motion.a
-            href="/cv/cv.pdf"
+            href="/React-Portfolio/cv/cv.pdf"
             target="_blank"
             rel="noopener noreferrer"
             whileHover={{ scale: 1.05 }}
@@ -142,7 +142,7 @@ export default function Navbar() {
                 transition={{ delay: 0.3 }}
               >
                 <a
-                  href="/cv/cv.pdf"
+                  href="/React-Portfolio/cv/cv.pdf"
                   target="_blank"
                   rel="noopener noreferrer"
                   onClick={() => setOpen(false)}
