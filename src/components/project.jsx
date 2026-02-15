@@ -58,40 +58,33 @@ export default function Projects() {
                 i % 2 === 1 ? "md:flex-row-reverse" : ""
               } items-center gap-10`}
             >
-
               <div className="w-full md:w-1/2">
-  <div className="border border-slate-700 hover:border-slate-500 
+                <div
+                  className="border border-slate-700 hover:border-slate-500 
                   bg-slate-900 p-6 rounded-xl 
                   overflow-hidden w-full h-full 
                   flex justify-center items-center
                   shadow-lg hover:shadow-2xl 
-                  transition-all duration-500">
-
-    <img
-      src={p.image}
-      alt={p.title}
-      className={`
-        transition-transform duration-500 ease-in-out hover:scale-105
-        object-contain
-        ${i === 2
-          ? "max-h-[420px] w-auto"
-          : "w-full"
-        }
-      `}
-    />
-
-  </div>
-</div>
-
+                  transition-all duration-500"
+                >
+                  <img
+                    src={p.image}
+                    alt={p.title}
+                    className={`
+                      transition-transform duration-500 ease-in-out hover:scale-105
+                      object-contain
+                      ${i === 2 ? "max-h-[420px] w-auto" : "w-full"}
+                    `}
+                  />
+                </div>
+              </div>
 
               <div className="md:w-1/2">
                 <h3 className="text-3xl font-semibold text-white mb-4">
                   {p.title}
                 </h3>
 
-                <p className="text-gray-400 mb-6 leading-relaxed">
-                  {p.desc}
-                </p>
+                <p className="text-gray-400 mb-6 leading-relaxed">{p.desc}</p>
 
                 <div className="flex flex-wrap gap-4 mb-6">
                   {p.stats.map((stat, j) => (
@@ -102,9 +95,7 @@ export default function Projects() {
                       <p className="text-lg font-bold text-cyan-400">
                         {stat.value}
                       </p>
-                      <p className="text-sm text-gray-400">
-                        {stat.label}
-                      </p>
+                      <p className="text-sm text-gray-400">{stat.label}</p>
                     </div>
                   ))}
                 </div>

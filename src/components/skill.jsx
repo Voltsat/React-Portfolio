@@ -107,14 +107,14 @@ export default function Skills() {
           </Swiper>
           <style global jsx>{`
             .swiper-button-prev, .swiper-button-next {
-              color: #22d3ee !important; /* Warna panah navigasi cyan */
+              color: #22d3ee !important;
             }
             .swiper-pagination-bullet-active {
-              background: #22d3ee !important; /* Warna dot aktif cyan */
+              background: #22d3ee !important;
             }
             .swiper-slide {
                 display: flex;
-                justify-content: center; /* Memastikan slide di tengah */
+                justify-content: center;
             }
           `}</style>
         </div>
@@ -136,7 +136,6 @@ export default function Skills() {
 
       <h2 className="text-5xl font-extrabold text-center mb-12 text-white drop-shadow-lg tracking-wide">My Expertise</h2>
 
-      {/* Tabs */}
       <div className="flex justify-center mb-10">
         <div className="flex bg-gray-900/80 backdrop-blur-xl rounded-full p-2 shadow-2xl border border-cyan-700/30">
           {tombol.map((tab) => (
