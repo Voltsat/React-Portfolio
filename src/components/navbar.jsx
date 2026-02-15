@@ -85,7 +85,7 @@ export default function Navbar() {
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
             className="flex items-center gap-2 px-4 py-2 rounded-full
-            bg-cyan-500 text-gray-900 font-semibold
+            bg-cyan-500 text-white font-semibold
             hover:bg-cyan-400 transition shadow-lg shadow-cyan-500/30"
           >
             <FileText size={18} />
@@ -148,7 +148,7 @@ export default function Navbar() {
                   onClick={() => setOpen(false)}
                   className="mt-4 flex items-center justify-center gap-2
                   px-4 py-3 rounded-full bg-cyan-500
-                  text-gray-900 font-semibold hover:bg-cyan-400 transition"
+                  text-white font-semibold hover:bg-cyan-400 transition"
                 >
                   <FileText size={18} />
                   Download CV

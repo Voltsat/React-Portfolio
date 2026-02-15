@@ -12,6 +12,7 @@ import sertif1 from "../assets/sertif1.png";
 import sertif2 from "../assets/sertif2.png"; 
 import sertif3 from "../assets/sertif3.png"; 
 import sertif4 from "../assets/sertif4.png"; 
+import sertif5 from "../assets/sertif5.png"; 
 
 const tombol = ["Skills", "Certificate", "Tools"];
 
@@ -20,19 +21,21 @@ const content = {
     { name: "Javascript", gambar: "https://www.w3schools.com/js/img_javascript_480.jpg", persen: 90 },
     { name: "Python", gambar: "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Python-logo-notext.svg/1200px-Python-logo-notext.svg.png", persen: 31 },
     { name: "PHP", gambar: "https://upload.wikimedia.org/wikipedia/commons/2/27/PHP-logo.svg", persen: 37 },
-    { name: "React", gambar: "https://upload.wikimedia.org/wikipedia/commons/thumb/3/30/React_Logo_SVG.svg/1200px-React_Logo_SVG.svg.png", persen: 46 }
+    { name: "React", gambar: "https://upload.wikimedia.org/wikipedia/commons/thumb/3/30/React_Logo_SVG.svg/1200px-React_Logo_SVG.svg.png", persen: 46 },
+    { name: "Flutter", gambar: "https://upload.wikimedia.org/wikipedia/commons/thumb/7/79/Flutter_logo.svg/250px-Flutter_logo.svg.png", persen: 67 },
   ],
   Certificate: [
     { name: "Codelamp Game Developer Certificate", gambar: sertif1 },
     { name: "IDNetworks Capture The Flag Certificate", gambar: sertif2 },
-
     { name: "Codelamp Game Developer Market Certificate", gambar: sertif3 }, 
-    { name: "Codelamp Game Developer Road Map Certificate", gambar: sertif4 } 
+    { name: "Codelamp Game Developer Road Map Certificate", gambar: sertif4 } ,
+    { name: "Belajar Dasar Pemrograman Web", gambar: sertif5 } 
   ],
   Tools: [
     { name: "Visual Studio Code", gambar: "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Visual_Studio_Code_1.35_icon.svg/1200px-Visual_Studio_Code_1.35_icon.svg.png" },
     { name: "Git & GitHub", gambar: "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e0/Git-logo.svg/1200px-Git-logo.svg.png" },
-    { name: "Figma", gambar: "https://upload.wikimedia.org/wikipedia/commons/3/33/Figma-logo.svg" }
+    { name: "Figma", gambar: "https://upload.wikimedia.org/wikipedia/commons/3/33/Figma-logo.svg" },
+    { name: "Android Studio", gambar: "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c1/Android_Studio_icon_%282023%29.svg/1280px-Android_Studio_icon_%282023%29.svg.png" },
   ]
 };
 
