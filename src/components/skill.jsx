@@ -19,9 +19,9 @@ const tombol = ["Skills", "Certificate", "Tools"];
 const content = {
   Skills: [
     { name: "Javascript", gambar: "https://www.w3schools.com/js/img_javascript_480.jpg", persen: 90 },
-    { name: "Python", gambar: "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Python-logo-notext.svg/1200px-Python-logo-notext.svg.png", persen: 31 },
+    { name: "Python", gambar: "https://s3.dualstack.us-east-2.amazonaws.com/pythondotorg-assets/media/community/logos/python-logo-only.png", persen: 31 },
     { name: "PHP", gambar: "https://upload.wikimedia.org/wikipedia/commons/2/27/PHP-logo.svg", persen: 37 },
-    { name: "React", gambar: "https://upload.wikimedia.org/wikipedia/commons/thumb/3/30/React_Logo_SVG.svg/1200px-React_Logo_SVG.svg.png", persen: 46 },
+    { name: "React", gambar: "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/960px-React-icon.svg.png?_=20220125121207", persen: 46 },
     { name: "Flutter", gambar: "https://upload.wikimedia.org/wikipedia/commons/thumb/7/79/Flutter_logo.svg/250px-Flutter_logo.svg.png", persen: 67 },
   ],
   Certificate: [
@@ -32,8 +32,8 @@ const content = {
     { name: "Belajar Dasar Pemrograman Web", gambar: sertif5 } 
   ],
   Tools: [
-    { name: "Visual Studio Code", gambar: "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Visual_Studio_Code_1.35_icon.svg/1200px-Visual_Studio_Code_1.35_icon.svg.png" },
-    { name: "Git & GitHub", gambar: "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e0/Git-logo.svg/1200px-Git-logo.svg.png" },
+    { name: "Visual Studio Code", gambar: "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Visual_Studio_Code_1.35_icon.svg/960px-Visual_Studio_Code_1.35_icon.svg.png" },
+    { name: "Git & GitHub", gambar: "https://img.icons8.com/ios11/512/FFFFFF/github.png" },
     { name: "Figma", gambar: "https://upload.wikimedia.org/wikipedia/commons/3/33/Figma-logo.svg" },
     { name: "Android Studio", gambar: "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c1/Android_Studio_icon_%282023%29.svg/1280px-Android_Studio_icon_%282023%29.svg.png" },
   ]

@@ -5,7 +5,7 @@ import fitnessIMG from "../assets/fitnessProject.png";
 export default function Projects() {
   const projects = [
     {
-      title: "React Portfolio",
+      title: "This Portfolio",
       desc: "A personal portfolio website built using React and Tailwind CSS. It presents my profile, skills, and selected projects in a clean and modern layout.",
       stats: [
         { label: "Views", value: "1K+" },
