@@ -2,13 +2,13 @@
   "name": "myportfolio",
   "private": true,
   "version": "0.0.0",
-  "homepage": "https://Voltsat.github.io/React-Portfolio",
+  "homepage": "https://dhabit.my.id/",
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "vite build",
+    "build": "vite",
     "lint": "eslint .",
-    "preview": "vite preview",
+    "preview": "vite",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d dist",
     "start": "vite"
