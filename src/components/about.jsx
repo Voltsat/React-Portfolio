@@ -4,6 +4,54 @@ import TextType from './animation/textType';
 
 import Muka from "../assets/face.png";
 import AnimatedContent from './animation/AnimatedContent'
+import SpotlightCard from './reactbits/SpotlightCard'
+import CountUp from './reactbits/CountUp'
+
+const stats = [
+  {
+    label: "Created Project",
+    value: 1,
+    suffix: "",
+    description: "Projects that I have created show my journey of learning and building useful applications.",
+    accent: "from-cyan-400 to-blue-600",
+    spotlight: "rgba(34, 211, 238, 0.3)",
+    icon: (
+      <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+        <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path>
+      </svg>
+    ),
+  },
+  {
+    label: "Owned Certificate",
+    value: 5,
+    suffix: "",
+    description: "Certificates that I have earned reflect the skills and knowledge I have achieved so far.",
+    accent: "from-purple-400 to-fuchsia-600",
+    spotlight: "rgba(192, 132, 252, 0.3)",
+    icon: (
+      <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+        <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+        <polyline points="14 2 14 8 20 8"></polyline>
+        <line x1="16" y1="13" x2="8" y2="13"></line>
+        <line x1="16" y1="17" x2="8" y2="17"></line>
+        <line x1="10" y1="9" x2="8" y2="9"></line>
+      </svg>
+    ),
+  },
+  {
+    label: "Years of Experience",
+    value: 1,
+    suffix: "+",
+    description: "My experience in programming represents the growth and challenges I have faced while improving my skills.",
+    accent: "from-emerald-400 to-teal-600",
+    spotlight: "rgba(52, 211, 153, 0.3)",
+    icon: (
+      <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+        <path d="M22 12h-4l-3 9L9 3l-3 9H2"></path>
+      </svg>
+    ),
+  },
+];
 
 export default function About() {
   return (
@@ -77,48 +125,28 @@ export default function About() {
         delay={0.1}
       >
       <div className='md:mx-auto md:w-[95%] px-9 mt-[4vh] md:mt-[8vh] lg:mt-[14vh] md:flex md:flex-wrap gap-4'>
-        <div className="bg-white/10 backdrop-blur-md rounded-xl shadow-lg p-3 mb-2 mx-auto border-2 border-white/5 hover:border-white flex-1">
-          <div className="flex flex-col items-center md:items-start text-center md:text-left px-4 md:px-8 py-4">
-            <div className='flex justify-between items-center w-full'>
-                <svg xmlns="http://www.w3.org/2000/svg" className="h-12 w-12 text-white p-2 bg-gray-500 border-2 border-white/20 rounded-lg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                  <path d="M12 2L2 7l10 5 10-5-10-5zM2 170l10 5 10-5M2 12l10 5 10-5"></path>
-                </svg>
-                <h3 className="text-xl font-semibold text-cyan-400">Created Project</h3>
-              <p className='text-2xl text-white p-2 bg-white/20 rounded-md w-12 flex justify-center'>1</p>
-            </div>
-            <p className="mt-2 text-gray-300 mx-auto">Projects that I have created show my journey of learning and building useful applications.</p>
-          </div>
-        </div>
+        {stats.map((stat, i) => (
+          <SpotlightCard
+            key={i}
+            spotlightColor={stat.spotlight}
+            className="relative overflow-hidden bg-white/5 backdrop-blur-md rounded-2xl shadow-lg mb-2 mx-auto border border-white/10 hover:border-white/30 flex-1 transition-colors duration-300"
+          >
+            <div className={`absolute -top-10 -right-10 h-28 w-28 rounded-full bg-gradient-to-br ${stat.accent} opacity-20 blur-2xl`} />
 
-        <div className="bg-white/10 backdrop-blur-md rounded-xl shadow-lg p-3 mb-2 mx-auto border-2 border-white/5 hover:border-white flex-1">
-          <div className="flex flex-col items-center md:items-start text-center md:text-left px-4 md:px-8 py-4">
-            <div className='flex justify-between items-center w-full'>
-                <svg xmlns="http://www.w3.org/2000/svg" className="h-12 w-12 text-white p-2 bg-gray-500 border-2 border-white/20 rounded-lg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                  <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
-                  <polyline points="14 2 14 8 20 8"></polyline>
-                  <line x1="16" y1="13" x2="8" y2="13"></line>
-                  <line x1="16" y1="17" x2="8" y2="17"></line>
-                  <line x1="10" y1="9" x2="8" y2="9"></line>
-                </svg>
-                <h3 className="text-xl font-semibold text-cyan-400">Owned Certificate</h3>
-              <p className='text-2xl text-white p-2 bg-white/20 rounded-md w-12 flex justify-center'>5</p>
-            </div>
-            <p className="mt-2 text-gray-300 mx-auto">Certificates that I have earned reflect the skills and knowledge I have achieved so far.</p>
-          </div>
-        </div>
+            <div className="relative flex flex-col items-center md:items-start text-center md:text-left px-6 py-6">
+              <div className={`h-12 w-12 flex items-center justify-center rounded-xl bg-gradient-to-br ${stat.accent} text-white shadow-lg mb-4`}>
+                {stat.icon}
+              </div>
 
-        <div className="bg-white/10 backdrop-blur-md rounded-xl shadow-lg p-3 mb-2 mx-auto border-2 border-white/5 hover:border-white flex-1">
-          <div className="flex flex-col items-center md:items-start text-center md:text-left px-4 md:px-8 py-4">
-            <div className='flex justify-between items-center w-full'>
-                <svg xmlns="http://www.w3.org/2000/svg" className="h-12 w-12 text-white p-2 bg-gray-500 border-2 border-white/20 rounded-lg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                  <path d="M22 12h-4l-3 9L9 3l-3 9H2"></path>
-                </svg>
-                <h3 className="text-xl font-semibold text-cyan-400">Years of Experience</h3>
-              <p className='text-2xl text-white p-2 bg-white/20 rounded-md w-12 flex justify-center'>1</p>
+              <p className="text-4xl font-extrabold text-white leading-none">
+                <CountUp to={stat.value} duration={1.5} />
+                {stat.suffix}
+              </p>
+              <h3 className="mt-1 text-sm font-semibold uppercase tracking-wide text-gray-300">{stat.label}</h3>
+              <p className="mt-3 text-sm text-gray-400">{stat.description}</p>
             </div>
-            <p className="mt-2 text-gray-300 mx-auto">My experience in programming represents the growth and challenges I have faced while improving my skills.</p>
-          </div>
-        </div>
+          </SpotlightCard>
+        ))}
       </div>
       </AnimatedContent>
 

@@ -6,6 +6,20 @@
     @apply transition-all duration-300 ease-in-out;
 }
 
+/* Respect the user's OS-level motion preference: disable/shorten all
+   animations & transitions (Tailwind utilities, Framer Motion, GSAP-driven
+   inline styles) instead of forcing motion on people who asked for less. */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
 
 
 @layer base {

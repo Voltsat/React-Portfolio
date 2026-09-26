@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
+import SpotlightCard from "./reactbits/SpotlightCard";
 
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Pagination, Navigation } from 'swiper/modules';
@@ -40,8 +41,11 @@ const content = {
 };
 
 const SkillCard = ({ name, gambar, persen }) => (
-  <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} whileHover={{ scale: 1.05 }} className="bg-gray-900/70 backdrop-blur-xl rounded-2xl p-4 flex flex-col items-center shadow-xl border border-cyan-600/40 hover:border-cyan-400 transition-all duration-300">
-    <img src={gambar} alt={name} className="w-14 h-14 object-contain mb-3 drop-shadow-lg" />
+  <SpotlightCard
+    spotlightColor="rgba(34, 211, 238, 0.25)"
+    className="bg-gray-900/70 backdrop-blur-xl rounded-2xl p-4 flex flex-col items-center shadow-xl border border-cyan-600/40 hover:border-cyan-400 transition-all duration-300"
+  >
+    <img src={gambar} alt={name} loading="lazy" className="w-14 h-14 object-contain mb-3 drop-shadow-lg" />
     <p className="text-lg font-semibold text-cyan-300 mb-2 text-center">{name}</p>
     <div className="w-full mt-2">
       <div className="h-2 bg-gray-700 rounded-full overflow-hidden">
@@ -49,7 +53,7 @@ const SkillCard = ({ name, gambar, persen }) => (
       </div>
       <p className="text-sm text-cyan-400 text-right mt-1">{persen}%</p>
     </div>
-  </motion.div>
+  </SpotlightCard>
 );
 
 const CertificateCard = ({ name, gambar }) => (
@@ -60,15 +64,18 @@ const CertificateCard = ({ name, gambar }) => (
       <p className="text-xl text-center font-bold text-cyan-300 leading-snug">{name}</p>
     </div>
     
-    <img src={gambar} alt={name} className="w-full max-h-[400px] object-cover" />
+    <img src={gambar} alt={name} loading="lazy" className="w-full max-h-[400px] object-cover" />
   </motion.div>
 );
 
 const ToolCard = ({ name, gambar }) => (
-  <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} whileHover={{ scale: 1.07 }} className="bg-gray-900/70 backdrop-blur-xl rounded-2xl p-4 shadow-lg border border-indigo-500/40 flex flex-col items-center">
-    <img src={gambar} alt={name} className="w-14 h-14 object-contain mb-3" />
+  <SpotlightCard
+    spotlightColor="rgba(129, 140, 248, 0.25)"
+    className="bg-gray-900/70 backdrop-blur-xl rounded-2xl p-4 shadow-lg border border-indigo-500/40 flex flex-col items-center"
+  >
+    <img src={gambar} alt={name} loading="lazy" className="w-14 h-14 object-contain mb-3" />
     <p className="text-lg font-semibold text-indigo-300 text-center">{name}</p>
-  </motion.div>
+  </SpotlightCard>
 );
 
 export default function Skills() {
@@ -137,14 +144,31 @@ export default function Skills() {
       <h2 className="text-5xl font-extrabold text-center mb-12 text-white drop-shadow-lg tracking-wide">My Expertise</h2>
 
       <div className="flex justify-center mb-10">
-        <div className="flex bg-gray-900/80 backdrop-blur-xl rounded-full p-2 shadow-2xl border border-cyan-700/30">
+        <div role="tablist" aria-label="Expertise category" className="flex bg-gray-900/80 backdrop-blur-xl rounded-full p-2 shadow-2xl border border-cyan-700/30">
           {tombol.map((tab) => (
-            <button key={tab} onClick={() => setActiveTab(tab)} className={`px-8 py-3 rounded-full font-bold transition-all duration-300 ${activeTab === tab ? "bg-cyan-600 text-white shadow-lg" : "text-gray-300 hover:text-white hover:bg-gray-700"}`}>{tab}</button>
+            <button
+              key={tab}
+              role="tab"
+              id={`tab-${tab}`}
+              aria-selected={activeTab === tab}
+              aria-controls={`panel-${tab}`}
+              onClick={() => setActiveTab(tab)}
+              className={`px-8 py-3 rounded-full font-bold transition-all duration-300 ${activeTab === tab ? "bg-cyan-600 text-white shadow-lg" : "text-gray-300 hover:text-white hover:bg-gray-700"}`}
+            >
+              {tab}
+            </button>
           ))}
         </div>
       </div>
 
-      <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} className="mx-auto w-11/12 xl:w-4/5 2xl:w-2/3 min-h-[50vh] bg-gray-900/60 backdrop-blur-2xl border border-gray-700 rounded-2xl shadow-2xl p-8">
+      <motion.div
+        role="tabpanel"
+        id={`panel-${activeTab}`}
+        aria-labelledby={`tab-${activeTab}`}
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        className="mx-auto w-11/12 xl:w-4/5 2xl:w-2/3 min-h-[50vh] bg-gray-900/60 backdrop-blur-2xl border border-gray-700 rounded-2xl shadow-2xl p-8"
+      >
         <h3 className="text-3xl font-bold mb-6 text-center text-cyan-300 border-b border-gray-700 pb-3">{activeTab}</h3>
         {renderContent()}
       </motion.div>

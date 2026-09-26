@@ -1,8 +1,13 @@
+import { Github, ExternalLink } from "lucide-react";
+import SpotlightCard from "./reactbits/SpotlightCard";
 import portfolioIMG from "../assets/portfolio.png";
 import digidawIMG from "../assets/digidaw.png";
 import fitnessIMG from "../assets/fitnessProject.png";
 
 export default function Projects() {
+  // TODO: replace demo/repo with the real URLs for each project.
+  // A card's button is hidden automatically while its link stays null,
+  // so nothing broken ships if you haven't filled one in yet.
   const projects = [
     {
       title: "This Portfolio",
@@ -14,6 +19,8 @@ export default function Projects() {
       ],
       tech: ["React", "Tailwind CSS", "Vite"],
       image: portfolioIMG,
+      demo: "https://dhabit.my.id/",
+      repo: null,
     },
     {
       title: "Digital Clock",
@@ -25,6 +32,8 @@ export default function Projects() {
       ],
       tech: ["HTML", "CSS", "JavaScript"],
       image: digidawIMG,
+      demo: null,
+      repo: null,
     },
     {
       title: "Fitness Application",
@@ -36,6 +45,8 @@ export default function Projects() {
       ],
       tech: ["Flutter", "Dart"],
       image: fitnessIMG,
+      demo: null,
+      repo: null,
     },
   ];
 
@@ -59,12 +70,13 @@ export default function Projects() {
               } items-center gap-10`}
             >
               <div className="w-full md:w-1/2">
-                <div
-                  className="border border-slate-700 hover:border-slate-500 
-                  bg-slate-900 p-6 rounded-xl 
-                  overflow-hidden w-full h-full 
+                <SpotlightCard
+                  spotlightColor="rgba(34, 211, 238, 0.25)"
+                  className="border border-slate-700 hover:border-slate-500
+                  bg-slate-900 p-6 rounded-xl
+                  w-full h-full
                   flex justify-center items-center
-                  shadow-lg hover:shadow-2xl 
+                  shadow-lg hover:shadow-2xl
                   transition-all duration-500"
                 >
                   <img
@@ -76,7 +88,7 @@ export default function Projects() {
                       ${i === 2 ? "max-h-[420px] w-auto" : "w-full"}
                     `}
                   />
-                </div>
+                </SpotlightCard>
               </div>
 
               <div className="md:w-1/2">
@@ -100,7 +112,7 @@ export default function Projects() {
                   ))}
                 </div>
 
-                <div className="flex flex-wrap gap-2">
+                <div className="flex flex-wrap gap-2 mb-6">
                   {p.tech.map((t, j) => (
                     <span
                       key={j}
@@ -110,6 +122,35 @@ export default function Projects() {
                     </span>
                   ))}
                 </div>
+
+                {(p.demo || p.repo) && (
+                  <div className="flex flex-wrap gap-4">
+                    {p.demo && (
+                      <a
+                        href={p.demo}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        aria-label={`View live demo of ${p.title}`}
+                        className="inline-flex items-center gap-2 bg-cyan-600 hover:bg-cyan-500 text-white px-5 py-2.5 rounded-lg font-medium transition-colors duration-300"
+                      >
+                        <ExternalLink size={18} />
+                        Live Demo
+                      </a>
+                    )}
+                    {p.repo && (
+                      <a
+                        href={p.repo}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        aria-label={`View source code of ${p.title} on GitHub`}
+                        className="inline-flex items-center gap-2 bg-transparent border border-slate-600 hover:border-slate-400 text-white px-5 py-2.5 rounded-lg font-medium transition-colors duration-300"
+                      >
+                        <Github size={18} />
+                        View Code
+                      </a>
+                    )}
+                  </div>
+                )}
               </div>
             </div>
           ))}

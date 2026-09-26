@@ -95,13 +95,13 @@ export default function Contact() {
             Follow Me
           </h3>
           <div className="flex gap-4 text-zinc-300">
-            <a href="https://linkedin.com/in/dh" target="_blank" rel="noopener noreferrer" className="p-[6px] rounded-md hover:text-white transition-colors duration-300">
+            <a href="https://linkedin.com/in/dh" target="_blank" rel="noopener noreferrer" aria-label="Visit my LinkedIn profile" className="p-[6px] rounded-md hover:text-white transition-colors duration-300">
               <Linkedin size={30} />
             </a>
-            <a href="https://github.com/Voltsat" target="_blank" rel="noopener noreferrer" className="p-[6px] rounded-md hover:text-white transition-colors duration-300">
+            <a href="https://github.com/Voltsat" target="_blank" rel="noopener noreferrer" aria-label="Visit my GitHub profile" className="p-[6px] rounded-md hover:text-white transition-colors duration-300">
               <Github size={30} />
             </a>
-            <a href="https://instagram.com/dhabitmfaqih" target="_blank" rel="noopener noreferrer" className="p-[6px] rounded-md hover:text-white transition-colors duration-300">
+            <a href="https://instagram.com/dhabitmfaqih" target="_blank" rel="noopener noreferrer" aria-label="Visit my Instagram profile" className="p-[6px] rounded-md hover:text-white transition-colors duration-300">
               <Instagram size={30} />
             </a>
           </div>
@@ -157,7 +157,11 @@ export default function Contact() {
             </div>
 
             {statusMessage && (
-              <p className={`text-sm font-semibold ${statusMessage.startsWith('✅') ? 'text-green-400' : 'text-red-400'}`}>
+              <p
+                role="status"
+                aria-live="polite"
+                className={`text-sm font-semibold ${statusMessage.startsWith('✅') ? 'text-green-400' : 'text-red-400'}`}
+              >
                 {statusMessage}
               </p>
             )}
