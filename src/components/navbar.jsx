@@ -29,7 +29,7 @@ export default function Navbar() {
     () => [
       {
         label: "Navigate",
-        bgColor: "#0e7490",
+        bgColor: "#3730a3",
         textColor: "#fff",
         links: [
           { label: "Home", href: "#home", ariaLabel: "Go to Home section" },
@@ -38,7 +38,7 @@ export default function Navbar() {
       },
       {
         label: "Work",
-        bgColor: "#4f46e5",
+        bgColor: "#4338ca",
         textColor: "#fff",
         links: [
           { label: "Projects", href: "#project", ariaLabel: "Go to Projects section" },
@@ -47,7 +47,7 @@ export default function Navbar() {
       },
       {
         label: "Connect",
-        bgColor: "#0f172a",
+        bgColor: "#312e81",
         textColor: "#fff",
         links: [
           { label: "Contact", href: "#contact", ariaLabel: "Go to Contact section" },
@@ -60,11 +60,11 @@ export default function Navbar() {
 
   return (
     <CardNav
-      brand={<><span className="text-cyan-400">D</span>habit</>}
+      brand={<><span className="text-indigo-400">D</span>habit</>}
       items={items}
       activeHref={`#${active}`}
       menuColor="#fff"
-      ctaHref="/React-Portfolio/cv/cv.pdf"
+      ctaHref={`${import.meta.env.BASE_URL}cv/cv.pdf`}
       ctaLabel="Download CV"
     />
   );
